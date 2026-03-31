@@ -7,6 +7,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
         <style>
+            @media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    width: 200px;
+    display: none;        /* hidden by default */
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    z-index: 999;         /* make sure it overlays other content */
+  }
+  .nav-links li {
+    text-align: center;
+    margin: 12px 0;       /* extra spacing so all links are visible */
+  }
+  .menu-toggle { display: block; }
+  .nav-links.active {
+    display: flex;        /* now flex in column mode */
+    flex-direction: column;
+  }
+}
             .header-container {
   display: flex;
   justify-content: space-between;
