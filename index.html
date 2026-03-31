@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Video Production Services | MPH Media</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
   <style>
+    <style>
+
+/* your existing CSS above */
+
+
+/* ============================= */
+/* GLOBAL MOBILE RESPONSIVENESS */
+/* ============================= */
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+  header div {
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  header img {
+    width: 140px !important;
+    margin-right: 0 !important;
+  }
+
+  #home {
+    padding: 60px 20px !important;
+    text-align: center;
+  }
+
+  #home h1 {
+    font-size: clamp(28px, 8vw, 42px) !important;
+    line-height: 1.2;
+  }
+
+  #home p {
+    font-size: clamp(16px, 4vw, 20px) !important;
+  }
+
+  iframe {
+    width: 100% !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  section div {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  section {
+    padding: 50px 20px !important;
+  }
+
+  a.button,
+  button {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px 18px;
+    font-size: 16px;
+  }
+
+}
+
+</style>
   body{font-family:Inter, Arial, sans-serif;margin:0;color:#1e1414;background:#fff}
   /* Header/footer nav styles from index.html */
   .racecar-nav {
