@@ -178,6 +178,37 @@
     .mph-hero h1 { font-size: 32px; }
     .mph-top-banner { font-size: 12px; padding: 6px 8px; }
   }
+  /* Mobile improvements: make nav, hero, featured work and footer easier to use on phones */
+  @media (max-width: 900px) {
+    header .nav-container { flex-direction: column; align-items: center; gap: 12px; padding: 12px 10px; }
+    header nav { gap: 16px; font-size: 1rem; flex-wrap: wrap; justify-content: center; }
+    .racecar-nav { font-size: 1rem; }
+    section { padding: 40px 6%; }
+    .mph-hero h1 { font-size: clamp(28px, 6vw, 40px); }
+    .mph-hero p { font-size: 1.05rem; }
+    .mph-services-grid { grid-template-columns: 1fr; }
+    .mph-service img { width: 120px; height: 86px; }
+    .mph-container { padding: 0 12px; }
+  }
+
+  @media (max-width: 480px) {
+    header .nav-container { padding: 8px 10px; }
+    header nav { gap: 12px; font-size: 0.95rem; }
+    /* Make hero shorter and headline readable */
+    #home { min-height: 60vh; }
+    #home h1 { font-size: clamp(22px, 8vw, 32px) !important; line-height: 1.05; }
+    #home p { font-size: 1rem !important; padding: 10px 14px; }
+    /* Stack featured work videos */
+    .mph-hero, .mph-container, .mph-services-grid { width: 100%; }
+    .mph-services-grid { grid-template-columns: 1fr; gap: 18px; }
+    /* Increase tap targets */
+    .contact-send-btn, a.contact-send-btn { display: block; width: 100%; padding: 14px 18px; box-sizing: border-box; }
+    /* Footer: stack nav and increase icon sizes */
+    footer nav { flex-direction: column; gap: 10px; align-items: center; }
+    footer .social-icons img, footer img { height: 32px !important; }
+    /* Reduce section padding on very small screens */
+    section { padding: 28px 5%; }
+  }
 </style>
 
 
