@@ -11,6 +11,49 @@
 
   <!-- Core Styles -->
   <style>
+    /* Header adjustments */
+header {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px; /* smaller logo on phones */
+  margin-bottom: 8px; /* allow space when stacked */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* spacing between links */
+  width: 100%; /* full width on small screens */
+}
+
+nav a {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Footer adjustments */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer a {
+  word-break: break-word; /* ensures emails/phones wrap */
+}
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
