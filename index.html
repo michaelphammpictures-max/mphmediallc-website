@@ -7,6 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">">
         <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
         <style>
+            .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.logo {
+  height: 48px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
             /* Header adjustments */
 header {
   background: #000;
@@ -92,6 +140,12 @@ footer a {
         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
       </a>
     </div>
+    <script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
     
 </body>
 <header style="background: #000; color: #fff; padding: 20px 0;">
