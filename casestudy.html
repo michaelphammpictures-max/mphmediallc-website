@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Marketing Case Studies | MPH Media LLC</title>
+    <meta name="description" content="Explore how MPH Media LLC elevates Nashville and Middle Tennessee businesses with story-driven video marketing that boosts engagement, brand awareness, and leads.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            background: #111;
+            font-family: 'Inter', sans-serif;
+            color: #f4f2f2;
+        }
+        a {
+            text-decoration: none;
+        }
+        .racecar-nav {
+            font-family: 'Orbitron', Arial, sans-serif;
+            font-weight: bold;
+            font-style: italic;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.2s, text-shadow 0.2s;
+        }
+        .racecar-nav:hover {
+            color: #39ff14;
+            text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+        }
+        .contact-send-btn {
+            background: #000;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .contact-send-btn:hover {
+            background: #ffd600;
+            color: #000;
+        }
+
+        header {
+            background: #000;
+            color: #fff;
+            padding: 20px 0;
+        }
+        header .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+        header nav {
+            display: flex;
+            gap: 40px;
+            font-size: 1.2em;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 80px 20px 40px;
+            background: linear-gradient(180deg, #000 0%, #1a1a1a 100%);
+            overflow: hidden;
+        }
+        /* Background video for hero */
+        .hero video.hero-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.45) saturate(0.95);
+            pointer-events: none;
+        }
+        .hero .hero-content { position: relative; z-index: 2; }
+        .hero h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 52px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        .case-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        .case-section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .case-section p.section-desc {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+            color: #aaa;
+            font-size: 16px;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        @media(max-width: 900px) {
+            .case-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media(max-width: 600px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .case-card {
+            background: #1a1a1a;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            overflow: hidden;
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+        .case-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.6);
+        }
+        .case-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .case-card .case-content {
+            padding: 22px;
+        }
+        .case-card .case-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #39ff14;
+        }
+        .case-card .case-subtitle {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+        .case-card .case-desc {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #ccc;
+        }
+
+        .testimonial-section {
+            background: #000;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-section h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+        .testimonial-author {
+            font-weight: bold;
+            color: #39ff14;
+            margin-top: 8px;
+        }
+
+        /* Background video inside testimonial section */
+        .testimonial-section video.testimonial-bg {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120vw;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+            filter: brightness(0.35) saturate(0.95);
+            pointer-events: none;
+        }
+        .testimonial-section .testimonial-inner { position: relative; z-index: 2; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .testimonial-section video.testimonial-bg { display: none !important; }
+        }
+
+        .cta-section {
+            background: #222;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .cta-section p {
+            font-size: 17px;
+            max-width: 650px;
+            margin: 0 auto 30px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin-right: 32px;" />
+        <nav>
+            <a href="index.html#home" class="racecar-nav">Home</a>
+            <a href="about.html" class="racecar-nav">About Us</a>
+            <a href="services-video-production.html" class="racecar-nav">Services</a>
+            <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+            <a href="contact.html" class="racecar-nav">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" aria-label="Case studies hero">
+        <video class="hero-bg" id="caseHeroVid" autoplay muted loop playsinline preload="auto" poster="MPH_Logo.png" aria-hidden="true">
+                <source src="mph.media.logo.animation.mov" type="video/mp4">
+                <!-- fallback: not all browsers play MOV; include MP4 if available -->
+                <source src="mph.media.logo.animation.mov" type="video/quicktime">
+        </video>
+
+        <div class="hero-content">
+            <h1>Video Marketing That Converts | MPH Media LLC</h1>
+            <p>See how MPH Media LLC helps Nashville and Middle Tennessee businesses tell their brand story, increase engagement, and drive measurable results with professional video marketing and creative content strategy.</p>
+        </div>
+</section>
+
+<!-- CASE STUDIES SECTION -->
+<section class="case-section">
+    <h2>Our Video Marketing Success Stories</h2>
+    <p class="section-desc">Each project we take on is tailored to solve a real business challenge. From corporate branding to social media campaigns, MPH Media delivers video content that produces measurable outcomes.</p>
+
+    <div class="case-grid">
+        <!-- Case Study 1 -->
+        <div class="case-card">
+            <img src="isha bts3.jpg" alt="The International Speed Horse Association">
+            <div class="case-content">
+                <div class="case-title">The International Speed Horse Association</div>
+                <div class="case-subtitle">Problem:</div>
+                <p class="case-desc">The organization needed to modernize its brand image and attract more patrons, equestrians for events and memberships.</p>
+                <div class="case-subtitle">Solution:</div>
+                <p class="case-desc">We created a full agent branding package with lifestyle visuals, interviews, and strategic storytelling to showcase the association’s unique appeal.</p>
+                <div class="case-subtitle">Results:</div>
+                <p class="case-desc">Membership inquiries increased by 40% and social engagement grew 65% within the first 6 months.</p>
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-card">
+            <img src="trainning videosq.jpg" alt="PT Brokers">
+            <div class="case-content">
+                <div class="case-title">PT Brokers</div>
+                <div class="case-subtitle">Problem:</div>
+                <p class="case-desc">PT Brokers needed a professional video production company to capture and produce a high quality series of sales traiining videos for when they onboard staff members.</p>
+                <div class="case-subtitle">Solution:</div>
+                <p class="case-desc">We produced a high-impact videos highlighting sales training. These videos helped when onboarding new sales staff. </p>
+                <div class="case-subtitle">Results:</div>
+                <p class="case-desc">The videos produced helped streamline their sales process. Video engagement increased 75%, and web inquiries doubled within one month of launch.</p>
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-card">
+            <img src="morebtscorporate.JPG" alt="HGTV Pool Company Web Series">
+            <div class="case-content">
+                <div class="case-title">HGTV Pool Company Web Series</div>
+                <div class="case-subtitle">Problem:</div>
+                <p class="case-desc">The client needed someone expereienced in the HGTV space to produce a number of youtube shows around their pool business. The goal was to grow brand awareness and showcase their projects to potential clients.</p>
+                <div class="case-subtitle">Solution:</div>
+                <p class="case-desc">We produced dynamic and engaging HGTV style show for the client, featuring their projects and expertise in the pool industry.</p>
+                <div class="case-subtitle">Results:</div>
+                <p class="case-desc">Youtube Subscriptions grew as well as viewership. Every HGTV-like show generated 4k-5k views on average.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div style="text-align: center; margin: 20px 0;">
+  <a href="https://www.canva.com/design/DAG-uxTNtUY/4tMFOKLvuET98P08wTg_Dg/view?utm_content=DAG-uxTNtUY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hbd2b6396e5"
+     style="
+       display: inline-block;
+       padding: 16px 40px;
+       background-color: #000;
+       color: #fff;
+       font-size: 16px;
+       font-weight: 600;
+       text-decoration: none;
+       border-radius: 50px;
+       cursor: pointer;
+       transition: transform 0.2s ease, box-shadow 0.2s ease;
+     "
+     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+     onmousedown="this.style.transform='scale(0.98)'; this.style.boxShadow='0 6px 14px rgba(0,0,0,0.25)';"
+     onmouseup="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+  >
+    Click Here to Explore More of Our Case Studies
+  </a>
+</div>
+
+<!-- VIDEO TESTIMONIALS SECTION -->
+<section class="testimonial-video-section" style="background: #111; padding: 60px 20px; text-align: center;">
+    <h2 style="font-family: 'Merriweather', serif; font-size: 42px; margin-bottom: 40px; color: #39ff14;">Client Video Testimonials</h2>
+    <p style="max-width: 700px; margin: 0 auto 50px; color: #ccc; font-size: 16px;">Hear directly from our clients about how MPH Media transformed their brand and engagement with video marketing.</p>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+        <!-- Video 1 -->
+        <div style="flex: 1 1 300px; max-width: 560px;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                <iframe src="https://www.youtube.com/embed/u1Z0AVLAZzE" 
+                        style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen title="Client Testimonial 1"></iframe>
+            </div>
+            <p style="color: #ccc; margin-top: 12px;">John Dziema President, The International Speed Horse Association</p>
+        </div>
+
+        <!-- Video 2 -->
+        <div style="flex: 1 1 300px; max-width: 560px;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.4);">
+                <iframe src="https://www.youtube.com/embed/PN2ce90LFsg" 
+                        style="position: absolute; top:0; left: 0; width: 100%; height: 100%;" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen title="Client Testimonial 2"></iframe>
+            </div>
+            <p style="color: #ccc; margin-top: 12px;">John Powell VP of Logistics, PT Brokers Testimonial </p>
+        </div>
+    </div>
+</section>
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonial-section">
+    <video class="testimonial-bg" autoplay muted loop playsinline preload="auto" poster="MPH_Logo.png" aria-hidden="true">
+        <source src="mph.media.logo.animation.mov" type="video/mp4">
+        <source src="mph.media.logo.animation.mov" type="video/quicktime">
+    </video>
+    <div class="testimonial-inner">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial">
+          “Micheal was amazing to work with and put out a professional and quality promotional video for the International Speed Horse Association. I would absolutely recommend him and MPH Media for any project. We will most definitely continue to use them for all of our projects in the future.” 
+          <div class="testimonial-author">– Rhonda Wagner, The International Speed Horse Association</div>
+      </div>
+      <div class="testimonial">
+          “We had a vision, and MPH Media delivered beyond our expectations. They perfectly captured our training day, adding immense value to our digital library with seamless branding, motion graphics, multiple deliverables, and professional engaging editing. We are thrilled with the results and excited for future projects with MPH Media!”
+          <div class="testimonial-author">– John Powell, VP of Logistics, PT Brokers</div>
+      </div>
+      <div class="testimonial">
+          “Michael is an outstanding videographer who consistently demonstrates a remarkable attention to detail in his work. His patience and friendly nature make working with him a delightful experience. One of Michael's greatest strengths is his ability to capture exactly what is needed, resulting in exceptional footage. His masterful editing skills enhance the quality of his videos, making them vivid and realistic. I highly recommend Michael for anyone seeking top-notch videography.”
+          <div class="testimonial-author">– Ramona Heidari, Professional Realtor </div>
+      </div>
+      <div class="testimonial">
+          “Michael crafted an outstanding cinematic home tour video for my wife's real estate listing. His work truly impressed us with its professionalism and attention to detail. Hope Purser, Realtor”
+          <div class="testimonial-author">– Steven Purser, Professional Realtor </div>
+      </div>
+    </div>
+</section>
+
+
+
+<section class="reviews-section">
+  <div class="reviews-container">
+    <h2>What Clients Are Saying</h2>
+
+    <div class="review-slider">
+      <div class="review active">
+        <p>"Michael delivered an exceptional video that exceeded expectations. Professional, creative, and seamless from start to finish."</p>
+        <h4>— Alex Montoya</h4>
+      </div>
+
+      <div class="review">
+        <p>"High-quality promotional video and an amazing experience working together. We will continue using MPH Media for future projects."</p>
+        <h4>— Rhonda Wagner</h4>
+      </div>
+
+      <div class="review">
+        <p>"Outstanding attention to detail and professionalism. A smooth, enjoyable process with excellent results."</p>
+        <h4>— Ramona Heidari</h4>
+      </div>
+
+      <div class="review">
+        <p>"Creative, flexible, and easy to work with. Delivered exactly what we needed with high-quality execution."</p>
+        <h4>— Sandy Guidry</h4>
+      </div>
+
+      <div class="review">
+        <p>"Fantastic video production that consistently impresses clients and showcases work at a high level."</p>
+        <h4>— Katie Hamm</h4>
+      </div>
+
+      <div class="review">
+        <p>"Professional, knowledgeable, and great at directing. The entire process felt effortless."</p>
+        <h4>— Michael Duca</h4>
+      </div>
+
+      <div class="review">
+        <p>"Responsive, attentive, and always goes above and beyond to deliver exceptional results."</p>
+        <h4>— Bobby Cao</h4>
+      </div>
+
+      <div class="review">
+        <p>"Highly adaptable and reliable across multiple projects. Always delivers on time with strong results."</p>
+        <h4>— Rachel Martin</h4>
+      </div>
+
+      <div class="review">
+        <p>"Outstanding final product with strong attention to detail and professional execution."</p>
+        <h4>— Steven Purser</h4>
+      </div>
+
+      <div class="review">
+        <p>"Easy to work with, skilled, and solution-oriented. Brings great energy to every project."</p>
+        <h4>— James</h4>
+      </div>
+
+      <div class="review">
+        <p>"Professional, reliable, and delivers high-quality video and editing work."</p>
+        <h4>— Tomas Leiva</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.reviews-section {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reviews-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.review-slider {
+  position: relative;
+  height: 150px;
+}
+
+.review {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+  width: 100%;
+}
+
+.review.active {
+  opacity: 1;
+}
+
+.review p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.review h4 {
+  font-size: 0.9rem;
+  color: #cccccc;
+  letter-spacing: 1px;
+}
+</style>
+
+<script>
+const reviews = document.querySelectorAll('.review');
+let index = 0;
+
+function showNextReview() {
+  reviews[index].classList.remove('active');
+  index = (index + 1) % reviews.length;
+  reviews[index].classList.add('active');
+}
+
+setInterval(showNextReview, 4000);
+</script>
+
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <h2>Ready to Elevate Your Brand With Video?</h2>
+    <p>Let MPH Media LLC craft strategic, high-quality video content that increases engagement, builds trust, and generates leads for your business.</p>
+    <a href="contact.html"><button class="contact-send-btn">Schedule Your Video Strategy Session</button></a>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+        <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin: 24px 0 0 0;" />
+        <nav style="display: flex; gap: 32px; font-size: 1.1em; margin-bottom: 12px;">
+            <a href="index.html#home" class="racecar-nav">Home</a>
+            <a href="about.html" class="racecar-nav">About Us</a>
+            <a href="index.html#services" class="racecar-nav">Services</a>
+            <a href="index.html#case-studies" class="racecar-nav">Case Studies</a>
+            <a href="index.html#contact" class="racecar-nav">Contact Us</a>
+        </nav>
+        <div style="font-size: 1em;">
+            <span>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color: #39ff14; text-decoration: none;">michael.hamm@mphmediallc.com</a></span> |
+            <span>Phone: <a href="tel:6154773210" style="color: #39ff14; text-decoration: none;">(615) 477-3210</a></span> |
+            <span>Location: Nashville, TN</span>
+        </div>
+        <div style="margin-top: 10px; font-size: 0.9em; color: #aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+                <div style="margin-top: 14px;">
+                    <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+                        Unlock the 2026 content playbook and start winning today
+                    </a>
+                </div>
+        <div style="margin-top: 18px; display: flex; gap: 24px; justify-content: center;">
+            <a href="https://www.instagram.com/mphmedia_llc?igsh=YWdnNm5wYnV0cXlh&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+            </a>
+            <a href="https://www.facebook.com/share/15vPrcJrLt/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+            </a>
+            <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+            </a>
+        </div>
+</footer>
+
+</body>
+</html>

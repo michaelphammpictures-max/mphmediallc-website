@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MPH Wedding Videography</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------------- GLOBAL ---------------- */
+
+body {
+margin:0;
+font-family:'Playfair Display', serif;
+background:white;
+color:#333;
+}
+
+section {
+padding:70px 10%;
+}
+
+h1 {
+font-family:'Great Vibes', cursive;
+font-size:48px;
+margin:10px 0;
+}
+
+h2 {
+font-size:28px;
+margin-bottom:30px;
+}
+
+p {
+line-height:1.6;
+}
+
+/* ---------------- NAV ---------------- */
+
+nav {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:white;
+border-bottom:1px solid #eee;
+}
+
+.logo img {
+height:60px;
+}
+
+.nav-links a {
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-size:16px;
+}
+
+/* canonical nav font used across site */
+.racecar-nav {
+	font-family: 'Orbitron', Arial, sans-serif;
+	font-weight: 700;
+	font-style: italic;
+	color: #fff;
+	text-decoration: none;
+	transition: color 0.2s, text-shadow 0.2s;
+}
+.racecar-nav:hover { color: #39ff14; text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14; }
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+background: linear-gradient(135deg,#9fd3c7,#b6dfe0);
+text-align:center;
+color:white;
+padding:90px 10%;
+}
+
+.hero img {
+width:260px;
+margin-top:20px;
+border-radius:6px;
+}
+
+.hero-subtitle {
+font-style:italic;
+font-size:22px;
+}
+
+/* ---------------- REVIEWS ---------------- */
+
+.reviews {
+text-align:center;
+background:white;
+}
+
+.stars {
+color:gold;
+font-size:22px;
+margin-bottom:20px;
+}
+
+.review-grid {
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+/* ---------------- FEATURE SECTION ---------------- */
+
+.feature {
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.feature-video iframe {
+width:100%;
+height:400px;
+border-radius:8px;
+}
+
+.contact-box {
+background:#f5e9f0;
+padding:25px;
+border-radius:8px;
+}
+
+.contact-box input,
+.contact-box textarea {
+width:100%;
+padding:12px;
+margin-bottom:12px;
+border:1px solid #ddd;
+}
+
+.contact-box button {
+background:#e05b6b;
+color:white;
+padding:12px;
+border:none;
+width:100%;
+cursor:pointer;
+}
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery {
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img {
+width:100%;
+border-radius:6px;
+}
+
+/* ---------------- PACKAGES ---------------- */
+
+.packages {
+text-align:center;
+}
+
+.package-grid {
+display:grid;
+grid-template-columns: repeat(3, 1fr);
+gap:32px;
+margin-top:40px;
+align-items:start;
+}
+
+.package {
+background:white;
+border:1px solid #eee;
+padding:20px;
+border-radius:8px;
+}
+
+.package img {
+width:100%;
+border-radius:6px;
+margin-bottom:15px;
+}
+
+.package ul {
+text-align:left;
+}
+
+/* ---------------- A LA CARTE ---------------- */
+
+.alacarte {
+text-align:center;
+background:#fafafa;
+}
+
+.alacarte ul {
+list-style:none;
+padding:0;
+}
+
+.alacarte li {
+padding:6px;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+text-align:center;
+padding:40px;
+background:#111;
+color:white;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media(max-width:768px){
+
+.feature {
+grid-template-columns:1fr;
+}
+
+.feature-video iframe {
+height:250px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- SITE HEADER (matching other pages) -->
+<header style="background:#000; color:#fff; padding:20px 0;">
+	<div style="display:flex; align-items:center; justify-content:center; gap:40px;">
+		<img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
+		<nav style="display:flex; gap:40px; font-size:1.1em;">
+			<a href="index.html" class="racecar-nav">Home</a>
+			<a href="about.html" class="racecar-nav">About Us</a>
+			<a href="services-video-production.html" class="racecar-nav">Services</a>
+			<a href="casestudy.html" class="racecar-nav">Case Studies</a>
+			<a href="contact.html" class="racecar-nav">Contact</a>
+		</nav>
+	</div>
+</header>
+
+<!-- Top social icons (fixed) -->
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+	<a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+		<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+	</a>
+	<a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+		<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+	</a>
+	<a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+		<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+	</a>
+</div>
+
+<!-- ensure nav fonts/style used elsewhere -->
+<style>
+	.racecar-nav { font-family: 'Orbitron', Arial, sans-serif; font-weight:700; color:#fff; text-decoration:none; }
+	.racecar-nav:hover { color:#39ff14; text-shadow:0 0 8px #39ff14; }
+	.contact-send-btn { background:#000; color:#fff; padding:12px 20px; border-radius:8px; text-decoration:none; display:inline-block; }
+
+/* Override page-local generic nav styling so header/footer match site */
+header nav, footer nav { background: transparent !important; padding: 0 !important; border: none !important; }
+
+/* Ensure footer links remain visible if any earlier rules set colors */
+footer a { color: #fff !important; text-decoration: none; }
+</style>
+</style>
+
+<!-- HERO -->
+
+<!-- HERO CINEMATIC SECTION -->
+
+<section style="
+padding:100px 10%;
+background:linear-gradient(135deg,#9fd3c7,#b6dfe0);
+text-align:center;
+color:white;
+">
+
+<h1 style="font-size:54px;">
+Cinematic Wedding Films That Feel Like Your Story
+</h1>
+
+<p style="
+max-width:700px;
+margin:20px auto;
+font-size:20px;
+font-style:italic;
+">
+
+Every wedding has a story. Your film should feel like it.
+
+</p>
+
+<div style="
+max-width:900px;
+margin:40px auto;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+">
+
+<video autoplay muted loop playsinline style="width:100%;">
+<source src="mph.media.website.video.final1.2.mp4" type="video/mp4">
+</video>
+
+</div>
+
+</section>
+
+<!-- FEATURE FILMS -->
+
+<section style="padding:80px 10%; text-align:center;">
+
+<h2 style="font-size:34px;">
+Featured Wedding Films
+</h2>
+
+<p style="
+max-width:700px;
+margin:0 auto 40px;
+color:#555;
+">
+
+A collection of love stories captured with emotion, movement, and cinematic storytelling.
+
+</p>
+
+<div style="
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+gap:24px;
+">
+
+<!-- VIDEO 1 -->
+
+<div style="
+position:relative;
+padding-top:56.25%;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+">
+
+<iframe src="https://www.youtube.com/embed/j18Ll49Tq4I"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allowfullscreen></iframe>
+
+</div>
+
+<!-- VIDEO 2 -->
+
+<div style="
+position:relative;
+padding-top:56.25%;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+">
+
+<iframe src="https://www.youtube.com/embed/9X5NdrPlOtk"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allowfullscreen></iframe>
+
+</div>
+
+<!-- VIDEO 3 -->
+
+<div style="
+position:relative;
+padding-top:56.25%;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.15);
+">
+
+<iframe src="https://www.youtube.com/embed/AN-iJ6C4HBA?si=jMTQjLO8Uv76Dfn1"
+style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+allowfullscreen></iframe>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STORY SECTION -->
+
+<section style="
+padding:80px 10%;
+background:#fafafa;
+text-align:center;
+">
+
+<h2>
+More Than Video — It's Your Story
+</h2>
+
+<p style="
+max-width:750px;
+margin:auto;
+font-size:18px;
+color:#555;
+line-height:1.7;
+">
+
+Your wedding day will move fast — faster than you expect.  
+The laughter, the vows, the quiet moments before walking down the aisle… they deserve to be remembered exactly as they felt.
+
+Our films are designed to preserve not just how your wedding looked — but how it felt.
+
+</p>
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section style="
+padding:80px 10%;
+text-align:center;
+">
+
+<h2>What Couples Are Saying</h2>
+
+<div style="
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+margin-top:40px;
+">
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+">
+
+★★★★★
+
+<p>
+
+"Michael did a phenomenal job capturing our wedding day! He was able to show who we are as a couple, while showing every special moment of our day! Michael made us feel so comfortable in front of a camera that we completely forgot we were being filmed!" - Katie
+
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+">
+
+★★★★★
+
+<p>
+
+"Michael is a pleasure to work with from start to finish! He is extremely talented and very dedicated to his work.  He was very thorough in the planning process with us and captured all of the moments we wanted to treasure for years to come. We highly recommend Michael!" - Samantha
+
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+">
+
+★★★★★
+
+<p>
+
+"Michael's video evokes so many good feelings from a pinnacle life moment of beauty and family and fun. He took footage from 8 hours and created a four minute dazzling story to their song. It is a tremendous gift to us to have it, and everyone who I have shared it with has raved about Michael's amazing work." - E. Morel
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PACKAGES CTA -->
+
+<section style="
+padding:90px 10%;
+text-align:center;
+background:white;
+">
+
+<h2>
+Wedding Packages Designed For Real Moments
+</h2>
+
+<p style="
+max-width:700px;
+margin:auto;
+color:#555;
+">
+
+Flexible packages designed to match your vision and your wedding day timeline.
+
+</p>
+
+<div style="margin-top:30px;">
+
+<a href="https://www.canva.com/design/DAG1UJ_e7RA/8TxnCrPNn2g2VQ_WzWJMSQ/view?utm_content=DAG1UJ_e7RA&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hce753d2bc3"
+style="
+background:#000;
+color:white;
+padding:16px 32px;
+border-radius:8px;
+text-decoration:none;
+font-size:18px;
+">
+
+View Wedding Packages
+
+</a>
+
+</div>
+
+</section>
+
+<!-- OUR PROCESS (NEW SECTION) -->
+
+<section style="
+padding:90px 10%;
+background:#fafafa;
+text-align:center;
+">
+
+<h2>
+Our Process Is Simple
+</h2>
+
+<div style="
+max-width:800px;
+margin:auto;
+text-align:left;
+font-size:18px;
+line-height:1.8;
+color:#555;
+">
+
+<p>
+
+<strong>Step 1 — Reach Out</strong><br>
+Email us and we will send over wedding pricing along with our wedding portfolio.
+
+</p>
+
+<p>
+
+<strong>Step 2 — Choose Your Package</strong><br>
+Make your selections for what you want included in your wedding coverage.
+
+</p>
+
+<p>
+
+<strong>Step 3 — Review & Confirm</strong><br>
+Send your selections back to us. Once reviewed, we will send an agreement for your signature and approval.
+
+</p>
+
+<p>
+
+<strong>Step 4 — You're Booked</strong><br>
+Once signed, your date is secured and officially booked.
+
+</p>
+
+<p style="margin-top:30px; font-style:italic;">
+
+We hope this information helps make the process clear and stress-free.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- COUPLE MOMENTS GALLERY -->
+
+<section style="
+padding:80px 10%;
+background:white;
+text-align:center;
+">
+
+<h2 style="font-size:34px;">
+Moments Behind The Lens
+</h2>
+
+<p style="
+max-width:700px;
+margin:0 auto 40px;
+color:#555;
+font-size:18px;
+">
+
+Real couples. Real emotions. Real memories captured forever.
+
+</p>
+
+<div style="
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+">
+
+<img src="me.with.couple.jpg" style="width:100%;border-radius:10px;">
+<img src="me.with.couple2.jpg" style="width:100%;border-radius:10px;">
+<img src="me.with.couple3.jpg" style="width:100%;border-radius:10px;">
+<img src="me.withcouple4.jpg" style="width:100%;border-radius:10px;">
+<img src="me.with.couple5.jpg" style="width:100%;border-radius:10px;">
+<img src="me.with.couple6.jpg" style="width:100%;border-radius:10px;">
+<img src="weddingstill2.jpeg" style="width:100%;border-radius:10px;">
+<img src="weddings8.JPG" style="width:100%;border-radius:10px;">
+
+</div>
+
+</section>
+
+
+
+<!-- PREMIUM PACKAGE SECTION -->
+
+<section id="packages" style="
+padding:90px 10%;
+background:#fafafa;
+text-align:center;
+">
+
+<h2 style="font-size:36px;">
+Wedding Packages
+</h2>
+
+<p style="
+max-width:700px;
+margin:0 auto 50px;
+color:#555;
+font-size:18px;
+">
+
+Thoughtfully designed collections to capture every meaningful moment of your wedding day.
+
+</p>
+
+<div style="
+display:grid;
+grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+gap:32px;
+align-items:start;
+">
+
+<!-- BRONZE PACKAGE -->
+
+<div style="
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+padding-bottom:25px;
+">
+
+<img src="weddingstill1.jpg" style="width:100%;">
+
+<h3 style="margin-top:20px;">
+Bronze Bundle
+</h3>
+
+<h4 style="color:#888;">Investment: $2,200</h4>
+
+<ul style="
+text-align:left;
+max-width:260px;
+margin:20px auto;
+line-height:1.8;
+">
+
+<li>Booking / Planning</li>
+<li>1 Professional Videographer</li>
+<li>6 Hours of Coverage</li>
+<li>3 Minute Cinematic Highlight Film</li>
+<li>Professional Audio</li>
+<li>Premium Digital Delivery</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- GOLD PACKAGE (MOST POPULAR) -->
+
+<div style="
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 18px 40px rgba(0,0,0,.12);
+border:2px solid #000;
+padding-bottom:25px;
+position:relative;
+">
+
+<div style="
+position:absolute;
+top:15px;
+right:15px;
+background:black;
+color:white;
+padding:6px 12px;
+font-size:12px;
+border-radius:20px;
+">
+
+MOST POPULAR
+
+</div>
+
+<img src="weddingfilm.still3.JPG" style="width:100%;">
+
+<h3 style="margin-top:20px;">
+Gold Bundle
+</h3>
+
+<h4 style="color:#888;">Investment: $3,500</h4>
+
+<ul style="
+text-align:left;
+max-width:260px;
+margin:20px auto;
+line-height:1.8;
+">
+
+<li>Booking / Planning</li>
+<li>1 Professional Videographer</li>
+<li>10 Hours Coverage</li>
+<li>5 Minute Highlight Film</li>
+<li>Full Ceremony Film</li>
+<li>Cinematic Teaser</li>
+<li>Drone Footage</li>
+<li>Professional Audio</li>
+<li>Premium Digital Delivery</li>
+
+</ul>
+
+</div>
+
+
+
+<!-- PLATINUM PACKAGE -->
+
+<div style="
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+padding-bottom:25px;
+">
+
+<img src="wedding.film.still3.jpg" style="width:100%;">
+
+<h3 style="margin-top:20px;">
+Platinum Bundle
+</h3>
+
+<h4 style="color:#888;">Investment: $4,500</h4>
+
+<ul style="
+text-align:left;
+max-width:260px;
+margin:20px auto;
+line-height:1.8;
+">
+
+<li>2 Professional Videographers</li>
+<li>10+ Hours Coverage</li>
+<li>5 Minute Highlight Film</li>
+<li>Full Ceremony Film</li>
+<li>First Dance Film</li>
+<li>Full Speeches Film</li>
+<li>15 Minute Wedding Film</li>
+<li>Drone Coverage</li>
+<li>All Raw Footage</li>
+<li>Premium Digital Delivery</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- A LA CARTE -->
+
+<section class="alacarte">
+
+<h2>A La Carte</h2>
+
+<ul>
+
+<li>Additional Hours</li>
+<li>Drone Coverage</li>
+<li>Raw Footage</li>
+<li>Reception Film</li>
+<li>Extra Videographer</li>
+
+</ul>
+
+</section>
+
+<!-- CTA: Wedding discovery call -->
+<div style="text-align:center; padding:28px 0 60px;">
+	<a class="contact-send-btn" href="https://calendly.com/mphmedia/weddingdiscoverycall" target="_blank" rel="noopener">Get Started — Wedding Discovery Call</a>
+</div>
+
+<!-- CONTACT FORM (replicated from contact.html, posts to Formspree) -->
+<section style="padding:60px 10%; background:#f9f9f9;">
+	<div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+		<div style="background:white; padding:28px; border-radius:10px;">
+			<h2 style="margin-top:0;">Start the Conversation</h2>
+			<p style="color:#666;">You’ll hear back directly from Michael within 24 hours.</p>
+			<form action="https://formspree.io/f/mykbwqbb" method="POST" accept-charset="UTF-8">
+				<input type="text" name="name" placeholder="Your Name" required style="width:100%; padding:12px; margin-bottom:12px;">
+				<input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:12px; margin-bottom:12px;">
+				<input type="tel" name="phone" placeholder="Phone (optional)" style="width:100%; padding:12px; margin-bottom:12px;">
+				<textarea name="message" rows="4" placeholder="Tell me what you’re looking to create" required style="width:100%; padding:12px; margin-bottom:12px;"></textarea>
+				<input type="hidden" name="_replyto" id="w-_replyto">
+				<input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+				<input type="hidden" name="_subject" value="Wedding page inquiry">
+				<button type="submit" class="contact-send-btn" style="background:#e05b6b; border-radius:8px; padding:12px 18px; color:#fff; border:none;">SEND MESSAGE</button>
+			</form>
+		</div>
+		<div style="background:#fff; padding:28px; border-radius:10px;">
+			<h3 style="margin-top:0;">Prefer Direct Contact?</h3>
+			<p style="color:#666;">Call or email directly and we’ll respond as soon as possible.</p>
+			<p style="margin-top:18px;"><strong>Phone:</strong> <a href="tel:6154773210">(615) 477-3210</a><br>
+			<strong>Email:</strong> <a href="mailto:michael.hamm@mphmediallc.com">michael.hamm@mphmediallc.com</a></p>
+		</div>
+	</div>
+</section>
+
+<footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
+	<div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+		<img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin: 24px 0 0 0;" />
+		<nav style="display: flex; gap: 32px; font-size: 1.1em; margin-bottom: 12px;">
+			<a href="index.html#home" class="racecar-nav">Home</a>
+			<a href="about.html" class="racecar-nav">About Us</a>
+			<a href="services-video-production.html" class="racecar-nav">Services</a>
+			<a href="casestudy.html" class="racecar-nav">Case Studies</a>
+			<a href="contact.html" class="racecar-nav">Contact Us</a>
+		</nav>
+		<div style="font-size: 1em;">
+			<span>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color: #39ff14; text-decoration: none;">michael.hamm@mphmediallc.com</a></span> |
+			<span>Phone: <a href="tel:6154773210" style="color: #39ff14; text-decoration: none;">(615) 477-3210</a></span> |
+			<span>Location: Nashville, TN</span>
+		</div>
+		<div style="margin-top: 18px; display: flex; gap: 24px; justify-content: center;">
+			<a href="https://www.instagram.com/mphmedia_llc?igsh=YWdnNm5wYnV0cXlh&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+			</a>
+			<a href="https://www.facebook.com/share/15vPrcJrLt/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+			</a>
+			<a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+				<img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+			</a>
+		</div>
+		<div style="margin-top: 14px;">
+		  <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+		    Unlock the 2026 content playbook and start winning today
+		  </a>
+		</div>
+		<div style="margin-top: 10px; font-size: 0.9em; color: #aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+	</div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+	const form = document.querySelector('section form[action*="formspree.io"]');
+	if(!form) return;
+	form.addEventListener('submit', function(){
+		const emailField = form.querySelector('input[type="email"]');
+		const reply = form.querySelector('#w-_replyto');
+		if(reply && emailField) reply.value = emailField.value || '';
+		const btn = form.querySelector('button[type="submit"]');
+		if(btn) btn.disabled = true;
+	});
+});
+</script>
+
+</body>
+</html>

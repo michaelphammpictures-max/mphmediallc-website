@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Video Production Services | MPH Media</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+  body{font-family:Inter, Arial, sans-serif;margin:0;color:#1e1414;background:#fff}
+  /* Header/footer nav styles from index.html */
+  .racecar-nav {
+    font-family: 'Orbitron', Arial, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s, text-shadow 0.2s;
+  }
+  .racecar-nav:hover {
+    color: #39ff14;
+    text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+  }
+  .contact-send-btn {
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .contact-send-btn:hover {
+    background: #ffd600;
+    color: #000;
+  }
+  header{background:#000;color:#fff;padding:20px 0}
+  .site-wrap{max-width:1100px;margin:0 auto;padding:24px}
+  nav{display:flex;gap:28px;justify-content:center}
+  a.racecar-nav{color:#fff;text-decoration:none;font-weight:700}
+  .hero{background:#171616;color:#fff;padding:60px 0;text-align:center}
+  .hero h1{font-size:36px;margin:0 0 12px}
+  .lead{max-width:820px;margin:0 auto;font-size:18px;color:#d7d1d1}
+  .section{padding:48px 0}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+  .card{background:#fff;border-radius:10px;padding:18px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+  .cta{display:flex;gap:12px;margin-top:18px}
+  .btn{background:#111;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+  footer{background:linear-gradient(90deg,#000 60%,#a6a0a0 100%);color:#fff;padding:28px 0;text-align:center}
+  @media(max-width:700px){.lead{padding:0 16px}.cta{flex-direction:column}}
+  /* Background video + overlay styles */
+  .hero-video-wrapper{position:relative;min-height:70vh;display:flex;align-items:center;justify-content:center;overflow:hidden;color:#fff}
+  .hero-video-wrapper video#bgvid{position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;width:auto;height:auto;z-index:-1;object-fit:cover;filter:brightness(0.45);}
+  .hero-overlay{position:relative;z-index:2;padding:80px 20px;text-align:center;max-width:1100px;margin:0 auto}
+  .hero-overlay h1{font-size:44px;margin:0 0 12px}
+  .hero-overlay .lead{color:#e6e6e6}
+  .dynamic-line{margin-top:14px;font-weight:700;font-size:20px;letter-spacing:0.6px;opacity:0;transition:opacity 400ms ease}
+  .dynamic-line.show{opacity:1}
+  /* Respect prefers-reduced-motion */
+  @media (prefers-reduced-motion: reduce){
+    .hero-video-wrapper video#bgvid{display:none}
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="site-wrap" style="display:flex;align-items:center;justify-content:center;gap:40px">
+      <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px">
+      <nav>
+        <a class="racecar-nav" href="index.html">Home</a>
+        <a class="racecar-nav" href="about.html">About</a>
+        <a class="racecar-nav" href="services-video-production.html">Services</a>
+        <a class="racecar-nav" href="casestudy.html">Case Studies</a>
+        <a class="racecar-nav" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <!-- Top social icons (fixed) -->
+  <div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+    <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+  </div>
+
+  <section class="hero-video-wrapper" aria-label="Hero background video">
+    <!-- Background video (muted autoplay loop). Uses local file mph_mediallc_behindthescenes_pictures.mp4 -->
+    <video id="bgvid" autoplay muted loop playsinline preload="auto" poster="MPH.media.video.mp4">
+      <source src="mph_mediallc_behindthescenes_pictures.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="hero-overlay">
+      <h1>Video Production Services</h1>
+      <p class="lead">From concept through delivery, MPH Media crafts cinematic, story-driven videos that influence audiences and drive results. We handle pre-production, production, and post-production with transparent pricing and fast turnaround.</p>
+
+      <div class="dynamic-line" id="dynamicText" aria-live="polite"></div>
+
+      <div class="cta" style="margin-top:18px;justify-content:center">
+        <a class="btn" href="contact.html">Get a quote</a>
+        <a class="btn" href="casestudy.html" style="background:#fff;color:#111;border:2px solid #111">See our work</a>
+      </div>
+    </div>
+  </section>
+<section style="padding: 80px 20px; background-color: #111; color: #fff; font-family: 'Arial', sans-serif;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+    <!-- Section Title -->
+    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 20px; letter-spacing: 1px;">
+      Our Video Content Services
+    </h2>
+    <p style="font-size: 18px; line-height: 1.7; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; color: #ccc;">
+      MPH Media produces high-quality video content across countless styles and formats. Our clients bring unique ideas, and we deliver cinematic, story-driven results that elevate their brand and engage their audience. From marketing content to luxury real estate and professional events, we handle it all with premium production quality.
+    </p>
+
+    <!-- Services List -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: left;">
+      
+      <ul style="flex: 1 1 280px; line-height: 1.8; list-style: none; padding-left: 0;">
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Social media content creation
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          YouTube long-form videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          YouTube Shorts
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Event videography
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Speaker reels
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Educational and training videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Origin story videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Brand anthem videos
+        </li>
+      </ul>
+
+      <ul style="flex: 1 1 280px; line-height: 1.8; list-style: none; padding-left: 0;">
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Website videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Q&A videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Product videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Real estate videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Brand videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Client testimonial videos
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Cinematic, story-driven content
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          Luxury real estate and construction content
+        </li>
+        <li style="position: relative; padding-left: 24px; margin-bottom: 12px; transition: transform 0.25s ease, color 0.25s ease;">
+          <span style="position: absolute; left: 0; top: 0; width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+          …and even more
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- Hover effect JS -->
+  <script>
+    document.querySelectorAll('li').forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        item.style.transform = 'translateX(8px)';
+        item.style.color = '#ffcc00';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.transform = 'translateX(0)';
+        item.style.color = '#fff';
+      });
+    });
+  </script>
+</section>
+  <main class="site-wrap">
+    <section class="section">
+      <h2>What we offer</h2>
+      <div class="cards" style="margin-top:12px">
+        <div class="card">
+          <h3>Concept & Creative Direction</h3>
+          <p>We develop narrative concepts and creative treatments that align with your goals — brand awareness, lead generation, product demos, or recruitment.</p>
+        </div>
+
+        <div class="card">
+          <h3>Scriptwriting & Storyboarding</h3>
+          <p>Concise scripts and clear storyboards keep shoots efficient and ensure every shot serves the story.</p>
+        </div>
+
+        <div class="card">
+          <h3>Production</h3>
+          <p>Professional direction, cinematography, lighting, sound, and crew tailored to your project scope — from single-camera interviews to multi-day commercial shoots.</p>
+        </div>
+
+        <div class="card">
+          <h3>Drone & Aerial</h3>
+          <p>FAA Part 107 licensed pilots with experience capturing cinematic aerial perspectives for real estate, events, and branded content.</p>
+        </div>
+
+        <div class="card">
+          <h3>Event Coverage</h3>
+          <p>Multi-camera event coverage, highlight reels, testimonial capture, and live event documentation.</p>
+        </div>
+
+        <div class="card">
+          <h3>Post-Production & Color</h3>
+          <p>Editing, color grading, motion graphics, and sound design that elevate the emotional impact and polish your final deliverable.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Typical project workflow</h2>
+      <ol style="max-width:820px;margin:12px 0 0 0;line-height:1.6;color:#d6caca">
+        <li><strong>Discovery:</strong> Align on goals, audience, and KPIs.</li>
+        <li><strong>Pre-production:</strong> Script, storyboard, schedule, location scouting, and casting.</li>
+        <li><strong>Production:</strong> Shoot the content with professional crew and equipment.</li>
+        <li><strong>Post-production:</strong> Editing, color, motion graphics, and revisions.</li>
+        <li><strong>Delivery & distribution:</strong> Final files optimized for web, social, or broadcast.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Packages & pricing</h2>
+      <p style="max-width:820px;color:#d6caca"">We offer flexible packages and custom quotes depending on scope. Typical budgets for high-quality video productions start at $2,500 for short-form pieces and scale based on crew, locations, and deliverables. Contact us for a tailored estimate.</p>
+    </section>
+
+    <!-- PREMIUM MPH MEDIA FAQ SECTION -->
+<section id="faq" style="padding: 80px 20px; max-width: 1000px; margin: auto; font-family: 'Helvetica Neue', sans-serif; background:#f9f9f9; border-radius:12px;">
+  <h2 style="text-align:center; font-size:3rem; margin-bottom:50px; color:#111;">Frequently Asked Questions</h2>
+
+  <!-- FAQ Item Template -->
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      What kinds of video content does MPH Media do?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      We do professional video for businesses and pros — strategic content that elevates your brand and drives engagement. Corporate promos, social content, real estate walkthroughs, events, testimonials, and aerial/drone footage are all part of our expertise.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      How much does a video cost?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      Pricing depends on scope, complexity, and goals. Simple social clips are more affordable, while cinematic corporate or real estate projects cost more. We customize packages based on ROI expectations.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      What’s the turn-around time?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      Typically 2–3 weeks from shoot to final delivery once approvals are complete. Faster turnaround is possible if prioritized — just let us know your timeline upfront.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      Do you handle the creative and strategic part, or just shoot & edit?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      We do full strategic storytelling — script guidance, shot planning, editing for platform performance, and brand-centric execution. Your videos won’t just look good — they’ll work for your business.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      Can you make content for social media specifically?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      Absolutely. We create short, platform-optimized content for TikTok, Instagram Reels, Facebook, YouTube, LinkedIn — whatever your audience is using. We format, edit, and style it so it performs.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      What makes MPH Media different from other videographers?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      - Brand-centric execution — not just visuals, but messaging aligned with your business goals.<br>
+      - Versatility — corporate, real estate, product, events, social — all under one roof.<br>
+      - Real ROI mindset — content that isn’t just pretty, it drives engagement or leads.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      What do I need to prepare before we shoot?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+    <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      Just your goals, ideas, and access to locations/subjects. We handle shot lists, schedules, and direction. If you want help prepping messaging or scripts — we do that too.
+    </div>
+  </div>
+
+  <div class="faq-item" style="border-bottom: 1px solid #ddd; padding:20px 0; position:relative;">
+    <button class="faq-question" style="background:none; border:none; width:100%; text-align:left; font-size:1.3rem; cursor:pointer; padding:10px 0; display:flex; justify-content:space-between; align-items:center; color:#222; transition: color 0.2s;">
+      Do you shoot weddings and personal events?
+      <span class="faq-arrow" style="transition: transform 0.3s ease;">&#9662;</span>
+    </button>
+      <div class="faq-answer" style="max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s ease; font-size:1rem; padding-left:10px; color:#555;">
+      Yes — we cover weddings and special events in addition to business-focused video work. Your memories or brand stories are always captured professionally. <a href="weddingfilms.html" style="color:#39ff14; text-decoration:underline;">Click here to see our wedding/event portfolio.</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- JS for accordion + arrow rotation -->
+<script>
+  const faqQuestions = document.querySelectorAll(".faq-question");
+  faqQuestions.forEach(q => {
+    q.addEventListener("click", () => {
+      const answer = q.nextElementSibling;
+      const arrow = q.querySelector(".faq-arrow");
+
+      if(answer.style.maxHeight){
+        answer.style.maxHeight = null;
+        arrow.style.transform = "rotate(0deg)";
+      } else {
+        // Close all other answers
+        document.querySelectorAll(".faq-answer").forEach(a => a.style.maxHeight = null);
+        document.querySelectorAll(".faq-arrow").forEach(ar => ar.style.transform = "rotate(0deg)");
+
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        arrow.style.transform = "rotate(180deg)";
+      }
+    });
+  });
+</script>
+
+<!-- Dynamic hero overlay text -->
+<script>
+  (function(){
+    const lines = [
+      'Cinematic storytelling for brands',
+      'Social-first content that converts',
+      'Drone & aerial cinematography',
+      'Fast turnaround, transparent pricing'
+    ];
+    const el = document.getElementById('dynamicText');
+    if(!el) return;
+    let idx = 0;
+    function showNext(){
+      el.classList.remove('show');
+      setTimeout(()=>{
+        el.textContent = lines[idx];
+        el.classList.add('show');
+        idx = (idx + 1) % lines.length;
+      }, 300);
+    }
+    // Initial show
+    showNext();
+    // Rotate every 3.2s
+    const interval = setInterval(showNext, 3200);
+
+    // Pause rotation when page hidden
+    document.addEventListener('visibilitychange', ()=>{
+      if(document.hidden) clearInterval(interval);
+    });
+  })();
+</script>
+
+  </main>
+
+  <footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin: 24px 0 0 0;" />
+    <nav style="display: flex; gap: 32px; font-size: 1.1em; margin-bottom: 12px;">
+      <a href="index.html#home" class="racecar-nav">Home</a>
+      <a href="about.html" class="racecar-nav">About Us</a>
+      <a href="index.html#services" class="racecar-nav">Services</a>
+      <a href="index.html#case-studies" class="racecar-nav">Case Studies</a>
+      <a href="contact.html" class="racecar-nav">Contact Us</a>
+    </nav>
+    <div style="font-size: 1em;">
+      <span>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color: #39ff14; text-decoration: none;">michael.hamm@mphmediallc.com</a></span> |
+      <span>Phone: <a href="tel:6154773210" style="color: #39ff14; text-decoration: none;">(615) 477-3210</a></span> |
+      <span>Location: Nashville, TN</span>
+    </div>
+    <div style="margin-top: 10px; font-size: 0.9em; color: #aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+    <div style="margin-top: 14px;">
+      <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+        Unlock the 2026 content playbook and start winning today
+      </a>
+    </div>
+    <div style="margin-top: 18px; display: flex; gap: 24px; justify-content: center;">
+      <a href="https://www.instagram.com/mphmedia_llc?igsh=YWdnNm5wYnV0cXlh&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+      </a>
+      <a href="https://www.facebook.com/share/15vPrcJrLt/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+      </a>
+      <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+      </a>
+    </div>
+  </div>
+  </footer>
+
+</body>
+</html>

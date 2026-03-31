@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About MPH Media | Nashville Video Production & Brand Storytelling</title>
+  <meta name="description" content="MPH Media is a Nashville-based video production company creating cinematic, brand-aligned content that builds awareness, trust, and long-term growth." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1e1414;
+      line-height: 1.6;
+      background: #ffffff;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', Arial, sans-serif;
+      letter-spacing: 0.5px;
+    }
+
+    h1 { font-size: 2.6rem; margin-bottom: 16px; }
+    h2 { font-size: 2rem; margin-bottom: 12px; }
+    h3 { font-size: 1.4rem; margin-bottom: 8px; }
+
+    section {
+      padding: 64px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* NAV */
+    .racecar-nav {
+      font-family: 'Orbitron', Arial, sans-serif;
+      font-weight: bold;
+      font-style: italic;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    .racecar-nav:hover {
+      color: #39ff14;
+      text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #3a2f2f;
+    }
+
+    .video-wrapper {
+      max-width: 760px;
+      margin: 40px auto 0;
+    }
+
+    iframe {
+      width: 100%;
+      height: 420px;
+      border-radius: 12px;
+      border: none;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin-top: 64px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 18px 46px;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #000, #1a1a1a);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      box-shadow: 0 18px 36px rgba(0,0,0,0.25);
+    }
+
+    .cta a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 26px 48px rgba(0,0,0,0.35);
+    }
+  </style>
+
+  <!-- Local Business Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "MPH Media LLC",
+    "image": "https://www.mphmediallc.com/MPH_Logo.png",
+    "url": "https://www.mphmediallc.com",
+    "telephone": "+1-615-477-3210",
+    "email": "michael.hamm@mphmediallc.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Nashville",
+      "addressRegion": "TN",
+      "addressCountry": "US"
+    },
+    "areaServed": "Tennessee",
+    "description": "MPH Media is a Nashville-based video production company specializing in cinematic brand storytelling, video marketing, aerial cinematography, and professional event coverage."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Top social icons (fixed) -->
+  <div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+    <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+  </div>
+<!-- HEADER (UNCHANGED STRUCTURE) -->
+<header style="background:#000; color:#fff; padding:20px 0;">
+  <div style="display:flex; align-items:center; justify-content:center; gap:40px;">
+    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
+    <nav style="display:flex; gap:40px; font-size:1.2em;">
+      <a href="index.html" class="racecar-nav">Home</a>
+      <a href="about.html" class="racecar-nav">About Us</a>
+      <a href="services-video-production.html" class="racecar-nav">Services</a>
+      <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+      <a href="contact.html" class="racecar-nav">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>About MPH Media — Nashville Video Production & Visual Storytelling</h1>
+    <p>
+      MPH Media is a Nashville-based video production company helping brands stand out through cinematic storytelling, strategic content, and visual consistency. We don’t create content to fill feeds — we create content that builds trust and drives growth. Cinematic video production that helps Nashville businesses attract hiigher-quality clients, stand out online, and convert attention into revenue. 
+“Book Your Free Discovery Call”
+Take the first step toward cinematic storytelling that actually moves your brand forward.
+    </p>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/sqgsoFaCOIo?autoplay=1&mute=1"
+        title="About MPH Media Nashville Video Production"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section>
+  <div class="container">
+    <h2>Our Story</h2>
+    <p>
+      MPH Media started from humble beginnings, building experience and insight in the corporate world from 2019 to 2023. During that time, we honed our understanding of what businesses, professionals, and events truly need to communicate and connect with their audience. By 2023, we officially launched MPH Media, bringing high-performing, premium, and stylized video content to brands ready to elevate their marketing.
+
+Since then, we’ve partnered with established businesses, entrepreneurs, and events to craft emotionally compelling videos that strengthen brand identity, engage ideal audiences, and deliver measurable results. Every project is designed with purpose—reflecting your unique style, accelerating your growth, and driving attention where it matters most. Join us in this story, and let’s create content that truly moves your business forward. 
+<p></p>MPH Media was built on a simple truth: businesses don’t need more content — they need better stories. In an oversaturated digital landscape, clarity and execution are what separate forgettable brands from trusted ones.
+    </p>
+    <p>
+      Here's why hiring us solves your problem better than anyone else in Nashville. We partner with established businesses, professionals, and event organizers to create emotionally compelling video that strengthens brand identity and delivers real-world results. “See How We Can Elevate Your Brand”
+Get a personalized plan for video content that grows awareness, trust, and engagement.
+    </p>
+  </div>
+</section>
+
+
+
+<!-- VALUES: SPEED / STYLE / DRIVE -->
+<section style="background:#ffffff;">
+  <div class="container">
+    <h2>Speed. Style. Drive.</h2>
+    “Drive Your Business Forward with Video”
+Fast, stylish, and intentional content for leaders who don’t wait.
+
+    <div class="grid">
+      <div class="card">
+        <h3>Speed</h3>
+        <p>
+          We believe speed matters — not rushed work, but efficient execution. Fast, reliable turnaround without sacrificing quality, because momentum is critical for businesses that want to grow and stay relevant.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Style</h3>
+        <p>
+          Every business has its own personality, tone, and visual language. Our job is to translate that into cinematic, brand-aligned content that looks and feels unmistakably like your business — not a generic template.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Drive</h3>
+        <p>
+          We work with driven entrepreneurs, business owners, and established companies that are serious about moving forward. Brands that value quality, clarity, and long-term growth — and understand video as leverage, not an expense.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section style="background:#f9f9fb;">
+  <div class="container">
+    <h2>What We Provide</h2>
+    <p>We craft visuals that amplify your brand, captivate audiences, and drive results across every platform.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Brand-Driven Video Production</h3>
+        <p>Cinematic video aligned with your brand’s identity, message, and long-term goals.</p>
+      </div>
+      <div class="card">
+        <h3>Aerial Cinematography</h3>
+        <p>FAA Part 107 licensed aerial visuals that elevate perspective and production value.</p>
+      </div>
+      <div class="card">
+        <h3>Event & Corporate Coverage</h3>
+        <p>Professional coverage captured with intention, precision, and narrative focus.</p>
+      </div>
+      <div class="card">
+        <h3>Social Media Video Marketing</h3>
+        <p>Strategic content designed to perform without compromising brand integrity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section>
+  <div class="container">
+    <h2>Our Process</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Discovery</h3>
+        <p>We define goals, audience, and positioning before a single frame is captured.</p>
+      </div>
+      <div class="card">
+        <h3>Strategy & Planning</h3>
+        <p>Creative direction and execution mapped directly to business objectives.</p>
+      </div>
+      <div class="card">
+        <h3>Production & Delivery</h3>
+        <p>High-end production optimized for clarity, consistency, and performance.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://calendly.com/mphmedia/discoverycall">Book a Free Discovery Call</a>
+    </div>
+  </div>
+</section>
+<section style="padding: 80px 20px; background-color: #111; color: #fff; font-family: Arial, Helvetica, sans-serif;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+    <!-- Section Title -->
+    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 40px; letter-spacing: 1px;">
+      Featured Work
+    </h2>
+
+    <!-- Video Container -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+      <!-- Aerial Demo Reel -->
+      <div style="flex: 1 1 450px; max-width: 560px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600; text-align: center; color: #fff;">
+          Aerial Demo Reel
+        </h3>
+    <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    <iframe title="Aerial Demo Reel" src="https://www.youtube-nocookie.com/embed/tVsuLS8aR-s?rel=0&modestbranding=1" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+      </div>
+
+      <!-- 10 Years of Experience -->
+      <div style="flex: 1 1 450px; max-width: 560px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600; text-align: center; color: #fff;">
+          10 Years of Professional Experience
+        </h3>
+        
+  <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    <iframe title="10 Years of Experience" src="https://www.youtube-nocookie.com/embed/3dDTIbvh_o4?rel=0&modestbranding=1" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER (UNCHANGED) -->
+<footer style="background:linear-gradient(90deg,#000 60%,#a6a0a0 100%); color:#fff; padding:40px 20px;">
+  <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
+    <nav style="display:flex; gap:32px; font-size:1.1em;">
+      <a href="index.html" class="racecar-nav">Home</a>
+      <a href="about.html" class="racecar-nav">About Us</a>
+      <a href="services-video-production.html" class="racecar-nav">Services</a>
+      <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+      <a href="contact.html" class="racecar-nav">Contact Us</a>
+    </nav>
+    <div style="font-size:0.95em;">
+      Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color:#39ff14;">michael.hamm@mphmediallc.com</a> |
+      Phone: <a href="tel:6154773210" style="color:#39ff14;">(615) 477-3210</a> |
+      Nashville, TN
+    </div>
+    <div style="margin-top:12px; display:flex; gap:18px; justify-content:center; align-items:center;">
+      <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:28px;width:28px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:28px;width:28px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:28px;width:28px;filter:invert(100%);" />
+      </a>
+    </div>
+    <div style="font-size:0.85em; color:#aaa;">© 2025 MPH Media LLC. All rights reserved.</div>
+    <div style="margin-top: 14px;">
+      <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+        Unlock the 2026 content playbook and start winning today
+      </a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

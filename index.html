@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MPH MEDIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+        <style>
+            .racecar-nav {
+                font-family: 'Orbitron', Arial, sans-serif;
+                font-weight: bold;
+                font-style: italic;
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.2s, text-shadow 0.2s;
+            }
+            .racecar-nav:hover {
+                color: #39ff14;
+                text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+            }
+            .contact-send-btn {
+                background: #000;
+                color: #fff;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                padding: 12px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+            }
+            .contact-send-btn:hover {
+                background: #ffd600;
+                color: #000;
+            }
+        </style>
+</head>
+<body>
+    <!-- Top social icons (fixed) -->
+    <div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+      <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+    </div>
+    
+</body>
+<header style="background: #000; color: #fff; padding: 20px 0;">
+            <div style="display: flex; align-items: center; justify-content: center; gap: 40px;">
+                <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin-right: 32px;" />
+                <nav style="display: flex; gap: 40px; font-size: 1.2em;">
+                    <a href="index.html" class="racecar-nav">Home</a>
+                    <a href="about.html" class="racecar-nav">About Us</a>
+                    <a href="services-video-production.html" class="racecar-nav">Services</a>
+                    <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+                    <a href="contact.html" class="racecar-nav">Contact Us</a>
+                </nav>
+            </div>
+</header>
+<section id="home" style="position: relative; width: 100%; height: 100vh; min-height: 500px; overflow: hidden; background: #000;">
+    <!-- Hero Video -->
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+        <source src="mph.media.website.video.final1_1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Dark overlay for cinematic effect -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2;"></div>
+
+    <!-- Text content -->
+    <div style="position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%; padding: 0 20px; text-align: center;">
+        <h1 style="margin: 0; font-size: 4rem; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: #fff; text-shadow: 0 4px 24px rgba(0,0,0,0.8);">
+            Welcome to MPH Media
+        </h1>
+        <p style="font-size: 1.8rem; font-weight: 700; margin-top: 24px; max-width: 900px; color: #fff; line-height: 1.4; background: rgba(0,0,0,0.35); padding: 16px 32px; border-radius: 8px; text-shadow: 0 2px 12px rgba(0,0,0,0.7);">
+            Moving your business in the right direction with powerful video marketing and brand storytelling to drive awareness and market share.
+        </p>
+    </div>
+
+    <!-- Bottom gradient fade -->
+    <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 40vh; background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, #000 100%); z-index: 2;"></div>
+</section>
+
+
+<!-- Place this where you want the banner/section -->
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+  /* reset-ish */
+  .mph-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
+
+  /* top slim banner */
+  .mph-top-banner {
+    background: #222; /* dark bar */
+    color: #fff;
+    text-align: center;
+    padding: 8px 12px;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 13px;
+    letter-spacing: .6px;
+  }
+
+  /* hero heading area */
+  .mph-hero {
+    background: #faf8f6; /* light textured-like background */
+    padding: 60px 0 40px;
+    font-family: "Merriweather", Georgia, serif;
+    color: #111;
+  }
+  .mph-hero h1 {
+    font-size: 56px;
+    margin: 0 0 26px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  /* services grid */
+  .mph-services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 48px;
+    align-items: start;
+  }
+
+  .mph-service {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+  }
+
+  .mph-service img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  }
+
+  .mph-service .meta {
+    font-family: "Inter", Arial, sans-serif;
+  }
+
+  .mph-service .title {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #2b2b2b;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .mph-service .desc {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.45;
+    margin: 0;
+  }
+
+  /* Right column alignment alternate effect (optional) */
+  /* Example: if you want right-column images to appear aligned to the right of the text,
+     you can add this class to those blocks. For simplicity we keep consistent layout. */
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .mph-hero h1 { font-size: 40px; text-align: left; }
+    .mph-services-grid { grid-template-columns: 1fr; gap: 18px; }
+    .mph-service img { width: 120px; height: 86px; }
+  }
+
+  @media (max-width: 480px) {
+    .mph-hero { padding: 36px 0 20px; }
+    .mph-hero h1 { font-size: 32px; }
+    .mph-top-banner { font-size: 12px; padding: 6px 8px; }
+  }
+</style>
+
+
+
+<section style="padding: 80px 20px; background-color: #111; color: #fff; font-family: Arial, Helvetica, sans-serif;">
+  <div style="max-width: 1200px; margin: 0 auto; text-align: center;">
+
+    <!-- FEATURED WORK -->
+    <h2 style="font-size: 32px; font-weight: 700; margin-bottom: 40px; letter-spacing: 1px;">
+      Featured Work
+    </h2>
+
+    <!-- Video Container -->
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 40px;">
+
+      <!-- Aerial Demo Reel -->
+      <div style="flex: 1 1 450px; max-width: 560px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600; text-align: center; color: #fff;">
+          Aerial Demo Reel
+        </h3>
+    <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    <iframe title="Aerial Demo Reel" src="https://www.youtube-nocookie.com/embed/tVsuLS8aR-s?rel=0&modestbranding=1" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+      </div>
+
+      <!-- 10 Years of Experience -->
+      <div style="flex: 1 1 450px; max-width: 560px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="margin-bottom: 16px; font-size: 20px; font-weight: 600; text-align: center; color: #fff;">
+          10 Years of Professional Experience
+        </h3>
+        
+  <div style="position: relative; width: 100%; padding-top: 56.25%; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.4);">
+    <iframe title="10 Years of Experience" src="https://www.youtube-nocookie.com/embed/3dDTIbvh_o4?rel=0&modestbranding=1" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen loading="lazy">
+    </iframe>
+  </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Transition / Intro Section -->
+<section id="transition-text" style="background: linear-gradient(to bottom, #633e3e 0%, #ffffff 100%); color: #633e3e; text-align: center; padding: 60px 20px;">
+    <div style="max-width: 900px; margin: 0 auto; font-size: 1.25rem; line-height: 1.6; color: #000;">
+        At MPH Media, we help Nashville and Middle Tennessee businesses elevate their brand with premium, cinematic video content that drives engagement, builds trust, and inspires action. From corporate storytelling and promotional videos to real estate media and full-scale marketing productions, we deliver compelling visuals that bring your message to life to help you gain more market share.
+    </div>
+</section>
+
+<!-- Why choose us (inserted) -->
+<section id="why-choose-us" style="background: linear-gradient(180deg, #ffffff 0%, #f4f2f2 100%); padding: 48px 0;">
+  <div class="mph-container" style="max-width:1100px; display:grid; grid-template-columns: 1fr 420px; gap:28px; align-items:center;">
+    <div style="text-align:left;">
+      <h2 style="font-size:28px; margin:0 0 8px;">Why choose us</h2>
+      <p style="color:#332727; font-size:16px; line-height:1.6; margin:0 0 12px;">Businesses across Nashville, Tennessee choose MPH Media because we deliver more than video — we deliver direction, strategy, and storytelling that actually converts. While many production companies simply film, MPH Media partners with brands to create emotionally compelling, story-driven video content that builds trust, commands attention, and drives real results.</p>
+      <p style="color:#332727; font-size:16px; line-height:1.6; margin:0 0 18px;">Our clients value our professional direction, fast turnaround times, and ability to create polished content that still feels authentic and human. From real estate and corporate brands to events and entrepreneurs, Nashville businesses choose MPH Media when they want video content that stands out, connects with the right audience, and elevates their brand beyond generic, forgettable visuals. Book a call today to get started.</p>
+      <div style="display:flex; gap:12px; margin-top:8px;">
+        <a href="contact.html" style="background:#111;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;">Work with us</a>
+        <a href="casestudy.html" style="border:2px solid #111;color:#111;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;">See case studies</a>
+      </div>
+    </div>
+    <div style="display:flex; justify-content:center;">
+      <div style="width:420px;height:260px;border-radius:12px;overflow:hidden;box-shadow:0 12px 36px rgba(0,0,0,0.12);">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3dDTIbvh_o4" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mph-hero">
+  <div class="mph-container">
+    <h1>Our Services</h1>
+    <p>MPH Media provides professional video marketing services across a wide range of needs, including brand storytelling, commercial content, social media videos, real estate, corporate projects, and live events. From strategy and filming to editing and delivery, we handle the full process to help businesses show up polished, credible, and competitive</p>
+<div style="text-align: center; margin: 20px 0;">
+  <a href="services-video-production.html"
+     style="
+       display: inline-block;
+       padding: 16px 40px;
+       background-color: #000;
+       color: #fff;
+       font-size: 16px;
+       font-weight: 600;
+       text-decoration: none;
+       border-radius: 50px;
+       cursor: pointer;
+       transition: transform 0.2s ease, box-shadow 0.2s ease;
+     "
+     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+     onmousedown="this.style.transform='scale(0.98)'; this.style.boxShadow='0 6px 14px rgba(0,0,0,0.25)';"
+     onmouseup="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+  >
+    Our Services
+  </a>
+</div>
+    <div class="mph-services-grid">
+      <div class="mph-service">
+        <img src="muusic video bts.JPG" alt="Custom video marketing">
+        <div class="meta">
+          <div class="title">Custom Video Marketing Packages</div>
+          <p class="desc">Our custom video marketing solutions boost visibility, engage your audience, and drive sales using story-driven content tailored to your brand.</p>
+        </div>
+      </div>
+
+      <div class="mph-service">
+        <img src="event videography.jpg" alt="Event videography">
+        <div class="meta">
+          <div class="title">Event Videography</div>
+          <p class="desc">Preserve the magic of your events with expert videography—capturing highlights and turning moments into powerful marketing assets.</p>
+        </div>
+      </div>
+
+      <div class="mph-service">
+        <img src="social samples.jpg" alt="Social media content">
+        <div class="meta">
+          <div class="title">Social Media Content Creation</div>
+          <p class="desc">Capture attention with short-form, trend-aware social content that grows your presence and strengthens community engagement.</p>
+        </div>
+      </div>
+
+      <div class="mph-service">
+        <img src="trainning videosq.jpg" alt="Educational videos">
+        <div class="meta">
+          <div class="title">Educational & Training Videos</div>
+          <p class="desc">Create clear, professional training and explainer videos that communicate your expertise and educate your audience effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+<section>
+  <section id="our-work" style="padding: 80px 20px; max-width: 1200px; margin: 0 auto;">
+  <h2 style="text-align: center; font-size: 36px; margin-bottom: 15px;">Our Work</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 60px; font-size: 18px; line-height: 1.6;">
+    We produce story-driven video content built to elevate brands, establish credibility, 
+    and drive real-world results. Every project below was created with intention, strategy, 
+    and professional execution.
+  </p>
+<div style="text-align: center; margin: 40px 0;">
+  <a href="https://www.canva.com/design/DAGquBJmObY/Jjzd_Npg9mEmTmQQuwrUgg/view?utm_content=DAGquBJmObY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd8fc54ffcd"
+     style="
+       display: inline-block;
+       padding: 16px 40px;
+       background-color: #000;
+       color: #fff;
+       font-size: 16px;
+       font-weight: 600;
+       text-decoration: none;
+       border-radius: 50px;
+       cursor: pointer;
+       transition: transform 0.2s ease, box-shadow 0.2s ease;
+     "
+     onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+     onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none';"
+     onmousedown="this.style.transform='scale(0.98)'; this.style.boxShadow='0 6px 14px rgba(0,0,0,0.25)';"
+     onmouseup="this.style.transform='scale(1.05)'; this.style.boxShadow='0 12px 28px rgba(0,0,0,0.35)';"
+  >
+    View Full Portfolio
+  </a>
+</div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+
+    <!-- Project -->
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/iKG4-0rAQoE" 
+        title="The International Speed Horse Association" frameborder="0" allowfullscreen></iframe>
+      <h3>The International Speed Horse Association</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/OuP2zzfbXs8" 
+        title="ISHA Your 2025 International Grand Champions" frameborder="0" allowfullscreen></iframe>
+      <h3>ISHA | Your 2025 International Grand Champions</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/1rmnKTW3L9g" 
+        title="Passion For Splashin Web Series" frameborder="0" allowfullscreen></iframe>
+      <h3>Passion For Splashin’ | Web Series</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/LcNmKmUsuls" 
+        title="RE/MAX Commercial" frameborder="0" allowfullscreen></iframe>
+      <h3>RE/MAX Commercial</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/EJZ9OQoFJIA" 
+        title="Realtor Profile Reel" frameborder="0" allowfullscreen></iframe>
+      <h3>Realtor Profile Reel</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/qwf4UPh9-vM" 
+        title="Client Testimonial" frameborder="0" allowfullscreen></iframe>
+      <h3>Client Testimonial</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/-JLBnw-dM0k" 
+        title="Cinematic Luxury Home Tour" frameborder="0" allowfullscreen></iframe>
+      <h3>Cinematic Luxury Home Tour</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/Sg6lTCc6_lw" 
+        title="How Much Does A Pool Cost | SEO Video" frameborder="0" allowfullscreen></iframe>
+      <h3>How Much Does A Pool Cost? | SEO Video</h3>
+    </div>
+
+    <div>
+      <iframe width="100%" height="215" src="https://www.youtube.com/embed/QmssDPJMBN4" 
+        title="Cowboy Mack A Short Documentary" frameborder="0" allowfullscreen></iframe>
+      <h3>Cowboy Mack | A Short Documentary</h3>
+    </div>
+<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1108222601?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VERTICAL_RecapVideoSpeedChampioship_AUGUST2025_REVISION1"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1103647604?h=dacff3542c&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="NolensvilleTopPlaces_MPHMedia"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<div style="padding:177.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1147481635?h=12cb7d3908&amp;title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Giovanna Agent Home Tour Reel 2025 Building Luxury"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+<div style="display:flex; justify-content:center; margin-top:80px;">
+  <a href="contact.html"
+     style="
+       position:center;
+       padding: 18px 44px;
+       font-size: 18px;
+       font-weight: 600;
+       letter-spacing: 0.4px;
+       color: #ffffff;
+       background: linear-gradient(135deg, #000000, #1a1a1a);
+       text-decoration: none;
+       border-radius: 50px;
+       overflow: hidden;
+       box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+       transition: transform 0.25s ease, box-shadow 0.25s ease;
+     "
+     onmouseover="this.style.transform='translateY(-3px) scale(1.02)'; this.style.boxShadow='0 25px 45px rgba(0,0,0,0.35)';"
+     onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.25)';"
+  >
+    <span style="position: center; z-index: 2;">
+      Book a Discovery Call
+    </span>
+    <span style="
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 60%);
+      z-index: 1;
+    "></span>
+  </a>
+</div>
+  </div>
+</section>
+
+<style>
+    
+  body {
+    background: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .testimonial-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    background: #ececec;
+  }
+
+  .testimonial-track {
+    display: flex;
+    gap: 40px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+  }
+
+  /* DUPLICATE THE TRACK TO MAKE IT SEAMLESS */
+  .track-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  .testimonial {
+    width: 330px;
+    min-height: 200px;
+    padding: 25px;
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center; /* CENTERED CONTENT */
+  }
+
+  .quote {
+    font-size: 1.05rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: #222;
+  }
+
+  .person {
+    margin-top: 20px;
+    font-weight: 700;
+    color: #000;
+  }
+
+  .person span {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #444;
+  }
+
+  /* INFINITE LOOP */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+</style>
+</head>
+<body>
+
+<div style="max-width:1100px;margin:32px auto 12px; text-align:center;">
+  <h2 style="font-size:28px; margin:0 0 8px;">Kind Words & Testimonies</h2>
+</div>
+<div class="testimonial-wrapper">
+
+  <div class="testimonial-track">
+    <div class="track-container">
+
+      <!-- ORIGINAL TRACK -->
+      <div class="testimonial">
+        <div class="quote">"MPH Media exceeded our expectations. The video turned out phenomenal!"</div>
+        <div class="person">Alex M. <span>Real Estate Client</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Professional, creative, and incredibly easy to work with."</div>
+        <div class="person">Jennifer L. <span>Business Owner</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Their attention to detail is unmatched. Stunning final product."</div>
+        <div class="person">Marcus R. <span>Marketing Director</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"We saw an immediate bump in engagement after using their content."</div>
+        <div class="person">Emily P. <span>Brand Manager</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"One of the best production teams we've ever worked with."</div>
+        <div class="person">Chris D. <span>Construction Company</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Absolutely worth every penny. MPH Media is our go-to now."</div>
+        <div class="person">Samantha T. <span>Events</span></div>
+      </div>
+
+      <!-- DUPLICATE TRACK FOR SEAMLESS LOOP -->
+      <div class="testimonial">
+        <div class="quote">"MI highly recommend working with Michael! He is extremely knowledgeable about his craft, uses top of the line equipment, and is great at directing you through the entire process!"</div>
+        <div class="person">Michael Duca. <span>Music Artist</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Professional, reliable, creative, and incredibly easy to work with."</div>
+        <div class="person">John P. <span>VP of Logistiics:PT Brokers</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Michael crafted an outstanding cinematic home tour video for my wife's real estate listing. His work truly impressed us with its professionalism and attention to detail. Hope Purser, Realtor."</div>
+        <div class="person">Steve Purser. <span>Realtor</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Michael is a rock ⭐️ videographer and was easy to work with!!!! He’s detailed in design and cutting-edge in creativity!!!!."</div>
+        <div class="person">Pam King. <span>Realtor</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Micheal was amazing to work with and put out a professional and quality promotional video for the International Speed Horse Association. I would absolutely recommend him and MPH Media for any project. We will most definitely continue to use them for all of our projects in the future.."</div>
+        <div class="person">Rhonda Wagner. <span>ADMIN:International Speed Horse Association</span></div>
+      </div>
+
+      <div class="testimonial">
+        <div class="quote">"Absolutely worth every penny. MPH Media is our go-to now."</div>
+        <div class="person">Samantha T. <span>Events</span></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+
+<footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <!-- Logo -->
+    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin: 24px 0 0 0;" />
+
+    <!-- Navigation -->
+    <nav style="display: flex; gap: 32px; font-size: 1.1em; margin-bottom: 12px;" aria-label="Footer Navigation">
+      <a href="index.html#home" style="color: #fff; text-decoration: none;">Home</a>
+      <a href="about.html" style="color: #fff; text-decoration: none;">About Us</a>
+      <a href="index.html#services" style="color: #fff; text-decoration: none;">Services</a>
+      <a href="index.html#case-studies" style="color: #fff; text-decoration: none;">Case Studies</a>
+      <a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- Contact Info -->
+    <div style="font-size: 1em; text-align: center;">
+      <span>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color: #39ff14; text-decoration: none;">michael.hamm@mphmediallc.com</a></span> |
+      <span>Phone: <a href="tel:6154773210" style="color: #39ff14; text-decoration: none;">(615) 477-3210</a></span> |
+      <span>Location: Nashville, TN</span>
+    </div>
+
+  <!-- Social Icons -->
+  <div style="margin-top: 18px; display: flex; gap: 24px; justify-content: center;">
+    <a href="https://www.instagram.com/mphmedia_llc?igsh=YWdnNm5wYnV0cXlh&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+    <a href="https://www.facebook.com/share/15vPrcJrLt/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+  </div>
+
+  <!-- Copyright -->
+  <div style="margin-top: 10px; font-size: 0.9em; color: #aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+  <!-- CTA Button -->
+  <div style="margin-top: 14px;">
+    <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+      Unlock the 2026 content playbook and start winning today
+    </a>
+  </div>
+
+  <!-- Hover effect -->
+  <style>
+    footer a img:hover { transform: scale(1.08); transition: transform 0.18s ease-in-out; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+  </div>
+</footer>
