@@ -8,49 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* Header adjustments */
-header {
-  background: #000;
-  color: #fff;
-  padding: 10px 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header img {
-  height: 40px; /* smaller logo on phones */
-  margin-bottom: 8px; /* allow space when stacked */
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px; /* spacing between links */
-  width: 100%; /* full width on small screens */
-}
-
-nav a {
-  font-size: 1rem;
-  margin: 5px;
-}
-
-/* Footer adjustments */
-footer {
-  background: #111;
-  color: #fff;
-  text-align: center;
-  padding: 20px 15px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-footer a {
-  word-break: break-word; /* ensures emails/phones wrap */
-}
         body {
             margin: 0;
             background: #111;
@@ -275,42 +232,78 @@ footer a {
 </head>
 <body>
 
-<body>
-  <!-- Top social icons (fixed) -->
-  <div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
-    <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
-    </a>
-    <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
-    </a>
-    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
-    </a>
-  </div>
-      <script>
+<!-- HEADER (responsive with sliding mobile nav) -->
+<script>
 function toggleMenu() {
-  const nav = document.querySelector('.nav-links');
-  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    const nav = document.querySelector('.nav-links');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 }
 </script>
-<!-- HEADER (UNCHANGED STRUCTURE) -->
-<header>
-  <div class="header-container">
-    <img src="MPH_Logo.png" alt="MPH Media Logo" class="logo">
 
-    <!-- Hamburger menu icon for mobile -->
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+<header style="background:#000; color:#fff; padding:12px 16px;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+        <div style="display:flex; align-items:center; gap:16px;">
+            <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
+        </div>
 
-    <!-- Navigation links -->
-    <nav class="nav-links">
-      <a href="index.html" class="racecar-nav">Home</a>
-      <a href="about.html" class="racecar-nav">About Us</a>
-      <a href="services-video-production.html" class="racecar-nav">Services</a>
-      <a href="casestudy.html" class="racecar-nav">Case Studies</a>
-      <a href="contact.html" class="racecar-nav">Contact Us</a>
+        <!-- Desktop nav -->
+        <nav id="primary-nav" style="display:flex; gap:28px; align-items:center;">
+            <a href="index.html" class="racecar-nav">Home</a>
+            <a href="about.html" class="racecar-nav">About Us</a>
+            <a href="services-video-production.html" class="racecar-nav">Services</a>
+            <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+            <a href="contact.html" class="racecar-nav">Contact Us</a>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" style="display:none; background:transparent; border:none; color:#fff; font-size:28px; cursor:pointer;">☰</button>
+    </div>
+
+    <!-- Mobile nav (hidden on desktop) — slides open/closed -->
+    <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+        <div style="padding:12px 16px; display:flex; flex-direction:column; gap:8px;">
+            <a href="index.html" class="racecar-nav">Home</a>
+            <a href="about.html" class="racecar-nav">About Us</a>
+            <a href="services-video-production.html" class="racecar-nav">Services</a>
+            <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+            <a href="contact.html" class="racecar-nav">Contact Us</a>
+        </div>
     </nav>
-  </div>
+
+    <style>
+        /* sliding mobile nav */
+        .mobile-nav {
+            max-height: 0;
+            overflow: hidden;
+            background: #000;
+            transition: max-height 320ms ease, opacity 220ms ease;
+            opacity: 0;
+        }
+        .mobile-nav.open {
+            max-height: 420px; /* enough to show links */
+            opacity: 1;
+        }
+        @media (max-width: 820px) {
+            #primary-nav { display: none !important; }
+            #nav-toggle { display: block !important; }
+        }
+        @media (min-width: 821px) {
+            .mobile-nav { display: none !important; }
+        }
+    </style>
+
+    <script>
+        (function(){
+            const toggle = document.getElementById('nav-toggle');
+            const mobile = document.querySelector('.mobile-nav');
+            if(!toggle || !mobile) return;
+            toggle.addEventListener('click', function(){
+                const open = mobile.classList.toggle('open');
+                mobile.setAttribute('aria-hidden', String(!open));
+                toggle.setAttribute('aria-expanded', String(open));
+            });
+        })();
+    </script>
 </header>
 
 <!-- HERO SECTION -->
