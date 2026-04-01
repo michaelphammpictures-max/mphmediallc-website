@@ -227,26 +227,6 @@
             margin: 0 auto 30px;
             color: #ccc;
         }
-        /* ===== FOOTER ===== */
-footer {
-    background: linear-gradient(90deg,#000 60%,#a6a0a0 100%);
-    color:#fff;
-    padding:0;
-    margin-top:40px;
-}
-footer img { height:48px; margin:24px 0 0 0; }
-footer nav { display:flex; gap:32px; font-size:1.1em; margin-bottom:12px; }
-footer nav a { text-decoration:none; color:#fff; transition:.25s; }
-footer nav a:hover { color:#39ff14; text-shadow:0 0 8px #39ff14; }
-footer div { font-size:1em; }
-footer .social-icons { margin-top:18px; display:flex; gap:24px; justify-content:center; }
-footer .social-icons img { height:32px; filter:invert(80%); }
-</style>
-</head>    
-<body>
-
-    </style>
-</head>
 <body>
 
 <!-- HEADER (responsive with sliding mobile nav) -->
@@ -626,14 +606,5 @@ setInterval(showNextReview, 4000);
                 <div style="margin-top:10px; font-size:.9em; color:#aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
     </div>
 </footer>
-<div id="footer-placeholder"></div>
-
-<script>
-fetch("footer.html")
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById("footer-placeholder").innerHTML = data;
-  });
-</script>
 </body>
 </html>
