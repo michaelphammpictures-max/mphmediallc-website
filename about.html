@@ -151,11 +151,23 @@
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
     </a>
   </div>
-<!-- HEADER (UNCHANGED STRUCTURE) -->
-<header style="background:#000; color:#fff; padding:20px 0;">
-  <div style="display:flex; align-items:center; justify-content:center; gap:40px;">
-    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
-    <nav style="display:flex; gap:40px; font-size:1.2em;">
+  
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+    
+</body>
+<header>
+  <div class="header-container">
+    <img src="MPH_Logo.png" alt="MPH Media Logo" class="logo">
+
+    <!-- Hamburger menu icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
       <a href="index.html" class="racecar-nav">Home</a>
       <a href="about.html" class="racecar-nav">About Us</a>
       <a href="services-video-production.html" class="racecar-nav">Services</a>
