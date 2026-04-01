@@ -159,11 +159,14 @@ function toggleMenu() {
 </script>
     
 </body>
+
 <header>
   <div class="header-container">
+    
+    <!-- Logo -->
     <img src="MPH_Logo.png" alt="MPH Media Logo" class="logo">
 
-    <!-- Hamburger menu icon for mobile -->
+    <!-- Hamburger menu icon -->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
 
     <!-- Navigation links -->
@@ -174,8 +177,16 @@ function toggleMenu() {
       <a href="casestudy.html" class="racecar-nav">Case Studies</a>
       <a href="contact.html" class="racecar-nav">Contact Us</a>
     </nav>
+
   </div>
 </header>
+
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
 
 <!-- HERO -->
 <section class="hero">
