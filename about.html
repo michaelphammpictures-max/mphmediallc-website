@@ -151,20 +151,79 @@
       <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
     </a>
   </div>
-<!-- HEADER (UNCHANGED STRUCTURE) -->
-<header style="background:#000; color:#fff; padding:20px 0;">
-  <div style="display:flex; align-items:center; justify-content:center; gap:40px;">
-    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
-    <nav style="display:flex; gap:40px; font-size:1.2em;">
+<!-- HEADER (responsive with sliding mobile nav) -->
+<script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+
+<header style="background:#000; color:#fff; padding:12px 16px;">
+  <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;">
+    <div style="display:flex; align-items:center; gap:16px;">
+      <img src="MPH_Logo.png" alt="MPH Media Logo" style="height:48px;" />
+    </div>
+
+    <!-- Desktop nav -->
+    <nav id="primary-nav" style="display:flex; gap:28px; align-items:center;">
       <a href="index.html" class="racecar-nav">Home</a>
       <a href="about.html" class="racecar-nav">About Us</a>
       <a href="services-video-production.html" class="racecar-nav">Services</a>
       <a href="casestudy.html" class="racecar-nav">Case Studies</a>
       <a href="contact.html" class="racecar-nav">Contact Us</a>
     </nav>
-  </div>
-</header>
 
+    <!-- Mobile hamburger -->
+    <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" style="display:none; background:transparent; border:none; color:#fff; font-size:28px; cursor:pointer;">☰</button>
+  </div>
+
+  <!-- Mobile nav (hidden on desktop) — slides open/closed -->
+  <nav id="mobile-nav" class="mobile-nav" aria-hidden="true">
+    <div style="padding:12px 16px; display:flex; flex-direction:column; gap:8px;">
+      <a href="index.html" class="racecar-nav">Home</a>
+      <a href="about.html" class="racecar-nav">About Us</a>
+      <a href="services-video-production.html" class="racecar-nav">Services</a>
+      <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+      <a href="contact.html" class="racecar-nav">Contact Us</a>
+    </div>
+  </nav>
+
+  <style>
+    /* sliding mobile nav */
+    .mobile-nav {
+      max-height: 0;
+      overflow: hidden;
+      background: #000;
+      transition: max-height 320ms ease, opacity 220ms ease;
+      opacity: 0;
+    }
+    .mobile-nav.open {
+      max-height: 420px; /* enough to show links */
+      opacity: 1;
+    }
+    @media (max-width: 820px) {
+      #primary-nav { display: none !important; }
+      #nav-toggle { display: block !important; }
+    }
+    @media (min-width: 821px) {
+      .mobile-nav { display: none !important; }
+    }
+  </style>
+
+  <script>
+    (function(){
+      const toggle = document.getElementById('nav-toggle');
+      const mobile = document.querySelector('.mobile-nav');
+      if(!toggle || !mobile) return;
+      toggle.addEventListener('click', function(){
+        const open = mobile.classList.toggle('open');
+        mobile.setAttribute('aria-hidden', String(!open));
+        toggle.setAttribute('aria-expanded', String(open));
+      });
+    })();
+  </script>
+</header>
 <!-- HERO -->
 <section class="hero">
   <div class="container">
