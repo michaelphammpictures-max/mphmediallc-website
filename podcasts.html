@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us | MPH MEDIA</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    /* Header adjustments */
+header {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px; /* smaller logo on phones */
+  margin-bottom: 8px; /* allow space when stacked */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* spacing between links */
+  width: 100%; /* full width on small screens */
+}
+
+nav a {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Footer adjustments */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer a {
+  word-break: break-word; /* ensures emails/phones wrap */
+}
+/* ===== GLOBAL ===== */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* ===== ANIMATED BACKGROUND ===== */
+body {
+    background: linear-gradient(120deg, #000, #111, #1a1a1a);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+}
+@keyframes gradientShift {
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* ===== HEADER ===== */
+header {
+    background:#000;
+    color:#fff;
+    padding:20px 0;
+}
+header .nav-container {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+}
+header nav a.racecar-nav {
+    font-family:'Orbitron', Arial, sans-serif;
+    font-weight:bold;
+    font-style:italic;
+    color:#fff;
+    text-decoration:none;
+    transition: color .25s, text-shadow .25s;
+}
+header nav a.racecar-nav:hover {
+    color:#39ff14;
+    text-shadow:0 0 10px #39ff14,0 0 20px #39ff14;
+}
+
+/* ===== HERO ===== */
+.contact-hero {
+    padding:120px 20px 80px;
+    text-align:center;
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(2px);
+}
+.contact-hero h1 {
+    font-size:clamp(2.6rem,5vw,3.4rem);
+    font-weight:700;
+    margin-bottom:16px;
+}
+.contact-hero p {
+    max-width:720px;
+    margin:0 auto;
+    font-size:1.25rem;
+    color:#cfcfcf;
+    line-height:1.6;
+}
+
+/* ===== CONTACT GRID ===== */
+.contact-wrapper {
+    max-width:1200px;
+    margin:0 auto 80px;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:1.4fr 1fr;
+    gap:48px;
+}
+@media(max-width:900px) {
+    .contact-wrapper { grid-template-columns:1fr; }
+}
+
+/* ===== GLASS CARDS ===== */
+.glass-card {
+    background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(20px);
+    border-radius:18px;
+    padding:44px;
+    box-shadow:0 30px 80px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.06);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+.glass-card:hover {
+    transform: translateY(-6px);
+    box-shadow:0 40px 100px rgba(0,0,0,.75), inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+/* ===== FORM ===== */
+.glass-card h2 { font-size:1.9rem; margin-bottom:10px; }
+.subtext { font-size:.95rem; color:#b5b5b5; margin-bottom:28px; }
+.form-group { display:grid; gap:16px; }
+input, textarea {
+    background: rgba(0,0,0,.65);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius:10px;
+    padding:16px;
+    font-size:1rem;
+    color:#fff;
+    transition:border .25s, background .25s;
+}
+input:focus, textarea:focus {
+    outline:none;
+    border-color:#39ff14;
+    background: rgba(0,0,0,.85);
+}
+
+/* ===== BUTTON ===== */
+.contact-send-btn {
+    margin-top:6px;
+    padding:16px;
+    font-size:1rem;
+    font-weight:600;
+    letter-spacing:.04em;
+    background: linear-gradient(135deg, #39ff14, #9dff6b);
+    color:#000;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    transition: transform .25s, box-shadow .25s;
+}
+.contact-send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 40px rgba(57,255,20,.45);
+}
+
+/* ===== RIGHT PANEL ===== */
+.contact-links a {
+    display:block;
+    padding:18px 22px;
+    border-radius:14px;
+    background: rgba(0,0,0,.55);
+    margin-bottom:18px;
+    color:#fff;
+    font-weight:500;
+    transition: transform .25s, background .25s;
+}
+.contact-links a span {
+    display:block;
+    color:#39ff14;
+    font-weight:400;
+    margin-top:4px;
+}
+.contact-links a:hover {
+    transform: translateX(6px);
+    background: rgba(0,0,0,.75);
+}
+.trust {
+    margin-top:28px;
+    font-size:.95rem;
+    color:#bdbdbd;
+    line-height:1.6;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: linear-gradient(90deg,#000 60%,#a6a0a0 100%);
+    color:#fff;
+    padding:0;
+    margin-top:40px;
+}
+footer img { height:48px; margin:24px 0 0 0; }
+footer nav { display:flex; gap:32px; font-size:1.1em; margin-bottom:12px; }
+footer nav a { text-decoration:none; color:#fff; transition:.25s; }
+footer nav a:hover { color:#39ff14; text-shadow:0 0 8px #39ff14; }
+footer div { font-size:1em; }
+footer .social-icons { margin-top:18px; display:flex; gap:24px; justify-content:center; }
+footer .social-icons img { height:32px; filter:invert(80%); }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="nav-container">
+        <img src="MPH_Logo.png" alt="MPH Media Logo">
+        <nav>
+            <a href="index.html" class="racecar-nav">Home</a>
+            <a href="about.html" class="racecar-nav">About Us</a>
+            <a href="services-video-production.html" class="racecar-nav">Services</a>
+            <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+            <a href="contact.html" class="racecar-nav">Contact Us</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Top social icons (fixed) -->
+<div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+    <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+    </a>
+</div>
+
+<!-- ============================================================
+  MPH MEDIA: DONE-FOR-YOU PODCAST PAGE
+  Paste this whole block into a Custom HTML / Code block on your podcast page.
+  Your own header and footer stay as they are.
+  Colors match your other sections. Search for [EDIT] to find spots to confirm.
+============================================================ -->
+
+<div class="mph-pod">
+  <style>
+    .mph-pod {
+      /* ---- BRAND CONTROLS: keep identical to the other sections ---- */
+      --mph-bg: #0c0d10;
+      --mph-bg-alt: #101217;
+      --mph-card: #15171c;
+      --mph-card-hover: #1a1d24;
+      --mph-border: rgba(255, 255, 255, 0.08);
+      --mph-text: #f4f5f7;
+      --mph-muted: #a4a9b4;
+      --mph-accent: #e8b04b;
+      --mph-accent-text: #0c0d10;
+      /* -------------------------------------------------------------- */
+
+      background: var(--mph-bg);
+      color: var(--mph-text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .mph-pod *, .mph-pod *::before, .mph-pod *::after { box-sizing: border-box; }
+    .mph-pod section { padding: clamp(60px, 9vw, 108px) 20px; }
+    .mph-pod .alt { background: var(--mph-bg-alt); }
+    .mph-pod__inner { max-width: 1120px; margin: 0 auto; }
+    .mph-pod__narrow { max-width: 780px; margin: 0 auto; }
+
+    .mph-pod__eyebrow {
+      display: block;
+      text-align: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--mph-accent);
+      margin: 0 0 16px;
+    }
+    .mph-pod h1, .mph-pod h2, .mph-pod h3 { color: var(--mph-text); margin: 0; }
+    .mph-pod__h2 {
+      text-align: center;
+      font-size: clamp(1.9rem, 4.6vw, 3rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      max-width: 780px;
+      margin: 0 auto 18px !important;
+    }
+    .mph-pod__lead {
+      text-align: center;
+      font-size: clamp(1.02rem, 2vw, 1.2rem);
+      color: var(--mph-muted);
+      max-width: 680px;
+      margin: 0 auto clamp(36px, 6vw, 60px);
+    }
+    .mph-pod em { font-style: normal; color: var(--mph-accent); }
+
+    /* Buttons */
+    .mph-pod__btn {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-decoration: none;
+      padding: 17px 38px;
+      border-radius: 999px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    }
+    .mph-pod__btn--primary { background: var(--mph-accent); color: var(--mph-accent-text); }
+    .mph-pod__btn--primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(232, 176, 75, 0.3); }
+    .mph-pod__btn--ghost { color: var(--mph-text); border: 2px solid rgba(255, 255, 255, 0.25); padding: 15px 34px; }
+    .mph-pod__btn--ghost:hover { border-color: var(--mph-accent); color: var(--mph-accent); }
+    .mph-pod__btn:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+    .mph-pod__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+
+    /* ---------- 1. HERO ---------- */
+    .mph-pod__hero {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(232, 176, 75, 0.14), transparent 62%),
+        var(--mph-bg);
+      padding-top: clamp(72px, 11vw, 132px) !important;
+    }
+    .mph-pod__hero h1 {
+      font-size: clamp(2.3rem, 6vw, 4rem);
+      line-height: 1.07;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      max-width: 900px;
+      margin: 0 auto 22px;
+    }
+    .mph-pod__hero p.sub {
+      font-size: clamp(1.08rem, 2.2vw, 1.3rem);
+      color: var(--mph-muted);
+      max-width: 700px;
+      margin: 0 auto 34px;
+    }
+    .mph-pod__facts {
+      list-style: none;
+      padding: 0;
+      margin: 44px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .mph-pod__facts li {
+      font-size: 0.9rem;
+      font-weight: 600;
+      border: 1px solid var(--mph-border);
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 999px;
+      padding: 8px 18px;
+    }
+    .mph-pod__facts li::before { content: "\2713"; color: var(--mph-accent); font-weight: 800; margin-right: 8px; }
+
+    /* ---------- Card grids ---------- */
+    .mph-pod__grid { display: grid; gap: 24px; list-style: none; padding: 0; margin: 0; }
+    .mph-pod__grid--4 { grid-template-columns: repeat(4, 1fr); }
+    .mph-pod__grid--3 { grid-template-columns: repeat(3, 1fr); }
+    .mph-pod__card {
+      background: var(--mph-card);
+      border: 1px solid var(--mph-border);
+      border-radius: 18px;
+      padding: 28px 24px 30px;
+      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+    }
+    .mph-pod__card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(232, 176, 75, 0.55);
+      background: var(--mph-card-hover);
+    }
+    .mph-pod__num {
+      display: inline-block;
+      background: rgba(12, 13, 16, 0.78);
+      border: 1px solid var(--mph-border);
+      color: var(--mph-accent);
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .mph-pod__card h3 { font-size: 1.2rem; line-height: 1.3; font-weight: 700; margin-bottom: 10px; }
+    .mph-pod__card p { margin: 0; font-size: 0.98rem; color: var(--mph-muted); }
+
+    /* ---------- 3. WHAT'S INCLUDED ---------- */
+    .mph-pod__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(32px, 5vw, 64px);
+      align-items: center;
+    }
+    .mph-pod__split h2 {
+      font-size: clamp(1.9rem, 4.2vw, 2.8rem);
+      line-height: 1.12;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+    .mph-pod__split p { color: var(--mph-muted); font-size: 1.05rem; margin: 0 0 24px; }
+    .mph-pod__checks { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+    .mph-pod__checks li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--mph-card);
+      border: 1px solid var(--mph-border);
+      border-radius: 14px;
+      padding: 16px 20px;
+    }
+    .mph-pod__checks li::before {
+      content: "\2713";
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(232, 176, 75, 0.16);
+      color: var(--mph-accent);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .mph-pod__checks strong { display: block; font-size: 1.02rem; margin-bottom: 2px; }
+    .mph-pod__checks span { font-size: 0.93rem; color: var(--mph-muted); }
+
+    /* Episode length visual */
+    .mph-pod__length {
+      background: var(--mph-card);
+      border: 1px solid rgba(232, 176, 75, 0.45);
+      border-radius: 18px;
+      padding: 28px 26px;
+      margin-top: 24px;
+    }
+    .mph-pod__length-label { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mph-accent); margin: 0 0 14px; }
+    .mph-pod__bar { position: relative; height: 10px; border-radius: 999px; background: rgba(255, 255, 255, 0.08); overflow: hidden; margin-bottom: 12px; }
+    .mph-pod__bar::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(232, 176, 75, 0.35), var(--mph-accent));
+      border-radius: 999px;
+    }
+    .mph-pod__ends { display: flex; justify-content: space-between; font-weight: 800; font-size: 1.1rem; }
+    .mph-pod__ends small { display: block; font-weight: 500; font-size: 0.82rem; color: var(--mph-muted); }
+    .mph-pod__ends div:last-child { text-align: right; }
+
+    /* ---------- 4. QUESTIONS ---------- */
+    .mph-pod__q { font-size: 1.12rem; font-weight: 700; line-height: 1.35; margin-bottom: 12px; }
+    .mph-pod__q::before { content: "\201C"; color: var(--mph-accent); font-size: 1.6rem; line-height: 0; margin-right: 4px; vertical-align: -0.35em; }
+    .mph-pod__tag { display: block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mph-accent); margin-bottom: 14px; }
+    .mph-pod__after { text-align: center; margin: 40px auto 0; max-width: 660px; font-size: 1.1rem; color: var(--mph-muted); }
+    .mph-pod__after strong { color: var(--mph-text); }
+
+    /* ---------- 5. HOW IT WORKS ---------- */
+    .mph-pod__steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; list-style: none; padding: 0; margin: 0 0 clamp(36px, 6vw, 56px); counter-reset: s; }
+    .mph-pod__step {
+      position: relative;
+      background: var(--mph-card);
+      border: 1px solid var(--mph-border);
+      border-radius: 18px;
+      padding: 30px 26px 32px;
+    }
+    .mph-pod__step::before {
+      counter-increment: s;
+      content: counter(s);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--mph-accent);
+      color: var(--mph-accent-text);
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+    }
+    .mph-pod__step h3 { font-size: 1.25rem; font-weight: 700; margin-bottom: 8px; }
+    .mph-pod__step p { margin: 0; color: var(--mph-muted); font-size: 0.98rem; }
+
+    /* ---------- 6. FAQ ---------- */
+    .mph-pod__faq { display: grid; gap: 12px; }
+    .mph-pod details {
+      background: var(--mph-card);
+      border: 1px solid var(--mph-border);
+      border-radius: 14px;
+      transition: border-color 0.2s ease;
+    }
+    .mph-pod details[open] { border-color: rgba(232, 176, 75, 0.5); }
+    .mph-pod summary {
+      list-style: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .mph-pod summary::-webkit-details-marker { display: none; }
+    .mph-pod summary::after { content: "+"; color: var(--mph-accent); font-size: 1.5rem; font-weight: 400; line-height: 1; transition: transform 0.2s ease; }
+    .mph-pod details[open] summary::after { transform: rotate(45deg); }
+    .mph-pod summary:focus-visible { outline: 3px solid var(--mph-accent); outline-offset: 2px; border-radius: 14px; }
+    .mph-pod details p { margin: 0; padding: 0 24px 22px; color: var(--mph-muted); font-size: 1rem; }
+
+    /* ---------- 7. FINAL CTA ---------- */
+    .mph-pod__final {
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(232, 176, 75, 0.14), transparent 62%),
+        var(--mph-bg);
+    }
+    .mph-pod__final h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      max-width: 760px;
+      margin: 0 auto 16px;
+    }
+    .mph-pod__final p { color: var(--mph-muted); font-size: 1.1rem; max-width: 560px; margin: 0 auto 32px; }
+    .mph-pod__small { margin-top: 16px !important; font-size: 0.9rem !important; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 1000px) { .mph-pod__grid--4 { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 860px) {
+      .mph-pod__split { grid-template-columns: 1fr; }
+      .mph-pod__grid--3, .mph-pod__steps { grid-template-columns: 1fr; max-width: 520px; margin-left: auto; margin-right: auto; }
+    }
+    @media (max-width: 600px) {
+      .mph-pod__grid--4 { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+      .mph-pod__actions .mph-pod__btn { flex: 1 1 100%; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .mph-pod__card, .mph-pod__btn, .mph-pod summary::after { transition: none; }
+      .mph-pod__card:hover, .mph-pod__btn--primary:hover { transform: none; }
+    }
+  </style>
+
+  <!-- ====================== 1. HERO ====================== -->
+  <section class="mph-pod__hero" aria-labelledby="pod-title">
+    <div class="mph-pod__inner">
+      <span class="mph-pod__eyebrow">Done-for-you podcasting</span>
+      <h1 id="pod-title">Turn what you know into a podcast that <em>brings in customers.</em></h1>
+      <p class="sub">MPH Media takes your voice and your expertise and publishes it on YouTube and your website, so the people asking questions online find you. You approve every episode. We handle everything else.</p>
+      <div class="mph-pod__actions">
+        <a class="mph-pod__btn mph-pod__btn--primary" href="contact.html">Schedule a discovery call &rarr;</a>
+        <a class="mph-pod__btn mph-pod__btn--ghost" href="#how-it-works">See how it works</a>
+      </div>
+      <ul class="mph-pod__facts" aria-label="Service highlights">
+        <li>Episodes from 5 minutes to 1 hour</li>
+        <li>Custom jingle with every episode</li>
+        <li>You approve every episode</li>
+        <li>We post and publish for you</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== 2. WHY PODCASTING WORKS ====================== -->
+  <section class="alt" aria-labelledby="pod-why">
+    <div class="mph-pod__inner">
+      <span class="mph-pod__eyebrow">Why podcasting works</span>
+      <h2 class="mph-pod__h2" id="pod-why">Your customers are already asking questions. <em>Be the one who answers.</em></h2>
+      <p class="mph-pod__lead">People search for answers on Google and YouTube before they ever pick up the phone. A podcast puts you in front of them with the answer, in your own voice.</p>
+
+      <ul class="mph-pod__grid mph-pod__grid--4">
+        <li class="mph-pod__card">
+          <span class="mph-pod__num">01</span>
+          <h3>Get found online</h3>
+          <p>Every episode you publish is more of your expertise on the web, answering the questions people are actually searching.</p>
+        </li>
+        <li class="mph-pod__card">
+          <span class="mph-pod__num">02</span>
+          <h3>Build trust with your voice</h3>
+          <p>People hire who they trust. Hearing you explain your work is the closest thing to meeting you before the first call.</p>
+        </li>
+        <li class="mph-pod__card">
+          <span class="mph-pod__num">03</span>
+          <h3>Show up in more places</h3>
+          <p>One conversation lives on YouTube and on your website, so customers find you wherever they're looking.</p>
+        </li>
+        <li class="mph-pod__card">
+          <span class="mph-pod__num">04</span>
+          <h3>Stay consistent without the work</h3>
+          <p>Most businesses never start a podcast because of the time. We take the production off your plate.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== 3. WHAT'S INCLUDED ====================== -->
+  <section aria-labelledby="pod-included">
+    <div class="mph-pod__inner mph-pod__split">
+      <div>
+        <span class="mph-pod__eyebrow" style="text-align:left;">What's included</span>
+        <h2 id="pod-included">A cohesive podcast system, run for you.</h2>
+        <p>From the first episode to every publish date, MPH Media manages the process. All you do is approve.</p>
+
+        <div class="mph-pod__length" aria-label="Episode length">
+          <p class="mph-pod__length-label">Episode length</p>
+          <div class="mph-pod__bar" aria-hidden="true"></div>
+          <div class="mph-pod__ends">
+            <div>5 min<small>Quick, focused answers</small></div>
+            <div>1 hour<small>Deep, full conversations</small></div>
+          </div>
+        </div>
+      </div>
+
+      <ul class="mph-pod__checks">
+        <li><div><strong>Your voice, front and center</strong><span>Episodes built around your expertise and how you actually talk.</span></div></li>
+        <li><div><strong>A custom jingle for your business</strong><span>A creative jingle that goes with every episode, so you sound like a brand.</span></div></li>
+        <li><div><strong>Published on YouTube and your website</strong><span>Your episodes go where your customers are searching.</span></div></li>
+        <li><div><strong>Full management</strong><span>We post it, publish it, and handle the details that come with running a podcast.</span></div></li>
+        <li><div><strong>Written content to help you get found</strong><span>Each episode can feed blog content that puts more of your keywords online. <!-- [EDIT] Confirm this is included in the service. --></span></div></li>
+        <li><div><strong>You stay in control</strong><span>Nothing goes live until you approve it.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ====================== 4. QUESTIONS CUSTOMERS ASK ====================== -->
+  <section class="alt" aria-labelledby="pod-questions">
+    <div class="mph-pod__inner">
+      <span class="mph-pod__eyebrow">Who it's for</span>
+      <h2 class="mph-pod__h2" id="pod-questions">You already know the answers. Now they can hear them.</h2>
+      <p class="mph-pod__lead">Every business gets the same questions again and again. Each one is an episode waiting to happen.</p>
+
+      <ul class="mph-pod__grid mph-pod__grid--3">
+        <li class="mph-pod__card">
+          <span class="mph-pod__tag">Wellness</span>
+          <h3 class="mph-pod__q">What should I expect at my first visit?</h3>
+          <p>Ease nerves before they book by walking people through exactly how it works.</p>
+        </li>
+        <li class="mph-pod__card">
+          <span class="mph-pod__tag">Contractors</span>
+          <h3 class="mph-pod__q">How much does a remodel cost in Nashville?</h3>
+          <p>Show your expertise and attract homeowners who are already ready to hire.</p>
+        </li>
+        <li class="mph-pod__card">
+          <span class="mph-pod__tag">Nonprofits</span>
+          <h3 class="mph-pod__q">How can I help families in my community?</h3>
+          <p>Tell your story and give supporters and volunteers a reason to get involved.</p>
+        </li>
+      </ul>
+      <p class="mph-pod__after"><strong>Not on this list?</strong> If people ask you questions, a podcast can answer them. Professionals and local businesses of every kind are a fit.</p>
+    </div>
+  </section>
+
+  <!-- ====================== 5. HOW TO GET STARTED ====================== -->
+  <section id="how-it-works" aria-labelledby="pod-how">
+    <div class="mph-pod__inner">
+      <span class="mph-pod__eyebrow">How to get started</span>
+      <h2 class="mph-pod__h2" id="pod-how">Three steps. <em>You only do one.</em></h2>
+      <p class="mph-pod__lead">Starting a podcast shouldn't feel like starting a second job.</p>
+
+      <ol class="mph-pod__steps">
+        <li class="mph-pod__step">
+          <h3>Book a quick discovery call</h3>
+          <p>We learn about your business, your customers, and the questions you want to answer.</p>
+        </li>
+        <li class="mph-pod__step">
+          <h3>We build your episodes</h3>
+          <p>We plan, produce, and edit each episode around your voice, with your custom jingle. <!-- [EDIT] Add one line here on how you capture their voice (they record, or you produce from their input). --></p>
+        </li>
+        <li class="mph-pod__step">
+          <h3>You approve. We publish.</h3>
+          <p>Review each episode. Once you say yes, we post and publish it on YouTube and your website.</p>
+        </li>
+      </ol>
+
+      <div class="mph-pod__actions">
+        <a class="mph-pod__btn mph-pod__btn--primary" href="contact.html">Book your discovery call &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== 6. FAQ ====================== -->
+  <section class="alt" aria-labelledby="pod-faq">
+    <div class="mph-pod__narrow">
+      <span class="mph-pod__eyebrow">Questions</span>
+      <h2 class="mph-pod__h2" id="pod-faq">Good questions. Straight answers.</h2>
+
+      <div class="mph-pod__faq" style="margin-top: 40px;">
+        <details>
+          <summary>How long are the episodes?</summary>
+          <p>Anywhere from 5 minutes to a full hour. We match the length to your topic and your audience.</p>
+        </details>
+        <details>
+          <summary>Do I really approve every episode?</summary>
+          <p>Yes. Nothing is published until you say it's ready. You're always in control of what goes out under your name.</p>
+        </details>
+        <details>
+          <summary>Where do my episodes get published?</summary>
+          <p>On YouTube and on your website, so customers can find them wherever they search.</p>
+        </details>
+        <details>
+          <summary>What is the jingle for?</summary>
+          <p>Every episode comes with a creative jingle made to fit your business. It gives your podcast a recognizable sound and makes it feel like a real brand.</p>
+        </details>
+        <details>
+          <summary>How soon will I see results?</summary>
+          <p>A podcast builds over time. The businesses that benefit most publish consistently, because every episode adds to what customers can find. We'll set honest expectations with you on the discovery call.</p>
+        </details>
+        <details>
+          <summary>What does it cost?</summary>
+          <p>We keep it priced for small businesses. We'll walk through the details on a quick discovery call.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== 7. FINAL CTA ====================== -->
+  <section class="mph-pod__final" aria-labelledby="pod-final">
+    <div class="mph-pod__inner">
+      <span class="mph-pod__eyebrow">Ready when you are</span>
+      <h2 id="pod-final">Your customers are searching. <em>Let's make sure they hear you.</em></h2>
+      <p>Book a quick discovery call and we'll get the process started.</p>
+      <div class="mph-pod__actions">
+        <a class="mph-pod__btn mph-pod__btn--primary" href="contact.html">Schedule a discovery call &rarr;</a>
+      </div>
+      <p class="mph-pod__small">A short conversation. No pressure.</p>
+    </div>
+  </section>
+
+  <!-- FAQ rich-result data for Google. If you edit the FAQ text above, keep this in sync. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "How long are the episodes?", "acceptedAnswer": { "@type": "Answer", "text": "Anywhere from 5 minutes to a full hour. We match the length to your topic and your audience." } },
+      { "@type": "Question", "name": "Do I really approve every episode?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Nothing is published until you say it's ready. You're always in control of what goes out under your name." } },
+      { "@type": "Question", "name": "Where do my episodes get published?", "acceptedAnswer": { "@type": "Answer", "text": "On YouTube and on your website, so customers can find them wherever they search." } },
+      { "@type": "Question", "name": "What is the jingle for?", "acceptedAnswer": { "@type": "Answer", "text": "Every episode comes with a creative jingle made to fit your business. It gives your podcast a recognizable sound and makes it feel like a real brand." } }
+    ]
+  }
+  </script>
+</div>
+<!-- FOOTER -->
+<footer>
+    <div style="display:flex; flex-direction:column; align-items:center; gap:16px;">
+        <img src="MPH_Logo.png" alt="MPH Media Logo" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services-video-production.html">Services</a>
+            <a href="casestudy.html">Case Studies</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+        <div>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color:#39ff14;">michael.hamm@mphmediallc.com</a> | 
+        Phone: <a href="tel:6154773210" style="color:#39ff14;">(615) 477-3210</a> | Nashville, TN</div>
+        <div style="margin-top:18px; display:flex; gap:18px; justify-content:center; align-items:center">
+            <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:28px;filter:invert(80%);"/></a>
+            <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:28px;filter:invert(80%);"/></a>
+            <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:28px;filter:invert(80%);"/></a>
+        </div>
+                <div style="margin-top:14px;">
+                    <a href="https://lp.constantcontactpages.com/sl/EiBo8rK/mphmedianewsletter" target="_blank" rel="noopener noreferrer" style="display:inline-block; background:#ffd600; color:#000; padding:12px 22px; border-radius:28px; font-weight:700; text-decoration:none;">
+                        Unlock the 2026 content playbook and start winning today
+                    </a>
+                </div>
+                <div style="margin-top:10px; font-size:.9em; color:#aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+    </div>
+</footer>
+
+<script>
+// Populate hidden _replyto so Formspree can set reply-to correctly and prevent double submits
+document.addEventListener('DOMContentLoaded', function(){
+    const form = document.querySelector('form.form-group');
+    if(!form) return;
+    form.addEventListener('submit', function(e){
+        const email = form.querySelector('input[type="email"]').value || '';
+        const reply = form.querySelector('#_replyto');
+        if(reply) reply.value = email;
+        // simple disable to avoid duplicates
+        const btn = form.querySelector('button[type="submit"]');
+        if(btn) btn.disabled = true;
+    });
+});
+</script>
+
+</body>
+</html>
