@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Open Graph (controls how your link looks when shared) -->
+
+<meta property="og:title" content="MPH Media | Gain More Market Share - Award Winning Video Production">
+
+<meta property="og:description" content="Results oriented video content for real estate, commercial, events, and businesses that want to stand out.">
+
+<meta property="og:image" content="mph-social-preview.jpg">
+
+<meta property="og:url" content="https://mphmediaco.com">
+
+<meta property="og:type" content="website">
+
+
+<!-- Twitter/X Support -->
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta name="twitter:title" content="MPH Media | Award Winning Video Production - Gain More Market Share">
+
+<meta name="twitter:description" content="Professional video content designed to elevate your brand.">
+
+<meta name="twitter:image" content="https://mphmediaco.com/images/mph-social-preview.jpg">
+    
+    <meta charset="UTF-8">
+    <title>MPH MEDIA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+        <style>
+            @media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    width: 200px;
+    display: none;        /* hidden by default */
+    padding: 10px 0;
+    border-radius: 0 0 8px 8px;
+    z-index: 999;         /* make sure it overlays other content */
+  }
+  .nav-links li {
+    text-align: center;
+    margin: 12px 0;       /* extra spacing so all links are visible */
+  }
+  .menu-toggle { display: block; }
+  .nav-links.active {
+    display: flex;        /* now flex in column mode */
+    flex-direction: column;
+  }
+}
+            .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.logo {
+  height: 48px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #111;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .nav-links a {
+    margin: 8px 0;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+            /* Header adjustments */
+header {
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px; /* smaller logo on phones */
+  margin-bottom: 8px; /* allow space when stacked */
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px; /* spacing between links */
+  width: 100%; /* full width on small screens */
+}
+
+nav a {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+/* Footer adjustments */
+footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer a {
+  word-break: break-word; /* ensures emails/phones wrap */
+}
+            .racecar-nav {
+                font-family: 'Orbitron', Arial, sans-serif;
+                font-weight: bold;
+                font-style: italic;
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.2s, text-shadow 0.2s;
+            }
+            .racecar-nav:hover {
+                color: #39ff14;
+                text-shadow: 0 0 8px #39ff14, 0 0 16px #39ff14;
+            }
+            .contact-send-btn {
+                background: #000;
+                color: #fff;
+                font-weight: bold;
+                border: none;
+                border-radius: 6px;
+                padding: 12px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: background 0.2s, color 0.2s;
+            }
+            .contact-send-btn:hover {
+                background: #ffd600;
+                color: #000;
+            }
+        </style>
+</head>
+<body>
+    <!-- Top social icons (fixed) -->
+    <div style="position:fixed;top:12px;right:12px;z-index:9999;display:flex;gap:12px;align-items:center">
+      <a href="https://www.instagram.com/mphmedia_llc" target="_blank" rel="noopener" title="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.facebook.com/share/15vPrcJrLt/" target="_blank" rel="noopener" title="Facebook">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+      <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height:22px;width:22px;filter:invert(100%);" />
+      </a>
+    </div>
+    <script>
+function toggleMenu() {
+  const nav = document.querySelector('.nav-links');
+  nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+}
+</script>
+    
+</body>
+<header>
+  <div class="header-container">
+    <img src="MPH_Logo.png" alt="MPH Media Logo" class="logo">
+
+    <!-- Hamburger menu icon for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <!-- Navigation links -->
+    <nav class="nav-links">
+      <a href="index.html" class="racecar-nav">Home</a>
+      <a href="about.html" class="racecar-nav">About Us</a>
+      <a href="services-video-production.html" class="racecar-nav">Services</a>
+      <a href="casestudy.html" class="racecar-nav">Case Studies</a>
+      <a href="contact.html" class="racecar-nav">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<title>MPH Media Training Videos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: same call-sheet system as the packages page. Two-column internal/external split is the page's one structural idea; samples sit mid-page as proof. */
+:root {
+  --bg: #F1F1EE;
+  --surface: #FFFFFF;
+  --ink: #15191C;
+  --muted: #566067;
+  --line: #D8DAD6;
+  --accent: #F2B233;
+  --accent-ink: #15191C;
+  --accent-text: #8A5600;
+  --frame: #1B2024;
+  --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0F1214; --surface: #171B1E; --ink: #ECEEEF; --muted: #9AA3A9;
+    --line: #2A3035; --accent: #F2B233; --accent-ink: #15191C; --accent-text: #F2B233;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0F1214; --surface: #171B1E; --ink: #ECEEEF; --muted: #9AA3A9;
+  --line: #2A3035; --accent: #F2B233; --accent-ink: #15191C; --accent-text: #F2B233;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+h1, h2, h3, p, ul, ol, dl, dd { margin: 0; }
+h1, h2, h3 { text-wrap: balance; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.mono { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 26px; letter-spacing: 0.04em; text-decoration: none; }
+.brand span { color: var(--accent-text); }
+.bar .mono { color: var(--muted); }
+
+.hero { padding-block: 56px 48px; display: grid; gap: 28px; }
+.hero .mono { color: var(--accent-text); }
+.hero h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(44px, 9vw, 96px); line-height: 0.95; text-transform: uppercase; max-width: 16ch; }
+.hero .lede { font-size: clamp(17px, 2.4vw, 20px); color: var(--muted); max-width: 60ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 16px; padding: 14px 22px; border-radius: 4px; border: 2px solid var(--accent); background: var(--accent); color: var(--accent-ink); }
+.btn:hover { filter: brightness(1.06); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.cred { display: flex; flex-wrap: wrap; gap: 8px 24px; color: var(--muted); }
+
+section { padding-block: 48px; border-top: 1px solid var(--line); }
+.sec-head { display: grid; gap: 10px; margin-bottom: 32px; max-width: 64ch; }
+.sec-head .mono { color: var(--accent-text); }
+h2 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(32px, 5.5vw, 52px); line-height: 1; }
+.sec-head p { color: var(--muted); }
+
+/* Internal vs external */
+.split { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 28px 24px; display: grid; gap: 16px; align-content: start; min-width: 0; }
+.panel .mono { color: var(--accent-text); }
+.panel h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 34px; line-height: 1; }
+.panel p { color: var(--muted); }
+.panel ul { list-style: none; padding: 0; display: grid; gap: 0; }
+.panel li { padding-block: 11px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 18px 1fr; gap: 10px; font-size: 15px; }
+.panel li::before { content: ""; width: 9px; height: 9px; background: var(--accent); margin-top: 7px; border-radius: 1px; }
+
+/* Platforms */
+.chips { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
+.chips li { border: 1px solid var(--ink); border-radius: 4px; padding: 10px 16px; font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; }
+.platform-note { margin-top: 20px; color: var(--muted); max-width: 64ch; }
+
+/* Who / what */
+.grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px 32px; list-style: none; padding: 0; }
+.grid4 li { border-top: 2px solid var(--ink); padding-top: 14px; }
+.grid4 b { display: block; font-size: 18px; margin-bottom: 4px; }
+.grid4 span { color: var(--muted); }
+
+/* Samples */
+.samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.sample { display: grid; gap: 12px; min-width: 0; align-content: start; }
+.mph-frame { position: relative; aspect-ratio: 16 / 9; width: 100%; border-radius: 6px; overflow: hidden; background: var(--frame) center / cover no-repeat; border: 1px solid var(--line); cursor: pointer; }
+.mph-frame::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.4), transparent 55%); pointer-events: none; }
+.mph-frame.playing { cursor: default; }
+.mph-frame.playing::after { display: none; }
+.mph-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; background: #000; z-index: 2; }
+.mph-play { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; width: 68px; height: 68px; border-radius: 50%; border: 0; padding: 0; background: var(--accent); cursor: pointer; transition: transform 0.15s ease; }
+.mph-play::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-35%, -50%); border-style: solid; border-width: 12px 0 12px 20px; border-color: transparent transparent transparent var(--accent-ink); }
+.mph-frame:hover .mph-play { transform: translate(-50%, -50%) scale(1.08); }
+.sample h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 26px; line-height: 1.05; }
+.sample p { color: var(--muted); font-size: 15px; }
+.sample .tag { color: var(--accent-text); }
+.mph-link { font-weight: 600; font-size: 15px; text-decoration: none; border-bottom: 2px solid var(--accent); justify-self: start; }
+
+/* CTA */
+#start { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 40px 24px; margin-top: 48px; display: grid; gap: 20px; }
+#start h2 { max-width: 18ch; }
+#start p { color: var(--muted); max-width: 56ch; }
+footer { padding-top: 32px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+@media (max-width: 520px) {
+  .hero { padding-block: 40px 36px; }
+  .bar .mono { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .mph-play { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="bar">
+    <a class="brand" href="#">MPH<span>.</span>MEDIA</a>
+    <span class="mono">Nashville, TN</span>
+  </header>
+
+  <main>
+    <div class="hero">
+      <p class="mono">Educational and training video</p>
+      <h1>Teach your people. Teach your customers.</h1>
+      <p class="lede">Training and educational video shows that your business understands its customers' problems and knows how to solve them. We produce it for your team and for your audience, from planning through the final edit.</p>
+      <div class="actions">
+        <a class="btn" href="#start">Book a discovery call</a>
+        <a class="btn ghost" href="#samples">Watch the samples</a>
+      </div>
+      <p class="cred mono"><span>Telly Award winner</span><span>10+ years in production</span><span>25+ Google reviews</span></p>
+    </div>
+
+    <section aria-labelledby="why">
+      <div class="sec-head">
+        <p class="mono">Why it works</p>
+        <h2 id="why">One video library, two jobs</h2>
+        <p>The same skills that train your team also build trust with the people you want as customers.</p>
+      </div>
+      <div class="split">
+        <article class="panel">
+          <p class="mono">Inside the company</p>
+          <h3>Internal training</h3>
+          <p>Teach it once, record it well, and every new hire and every location gets the same quality of instruction.</p>
+          <ul>
+            <li>Onboarding and process videos for new team members</li>
+            <li>Sales training and playbook walkthroughs</li>
+            <li>Consistent messaging across franchise locations or offices</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <p class="mono">In front of customers</p>
+          <h3>External education</h3>
+          <p>When you answer your customers' questions on camera, you become the expert they go to when they have a problem.</p>
+          <ul>
+            <li>How-to and explainer videos that solve a real customer problem</li>
+            <li>Product videos that show what it does and why it matters</li>
+            <li>Content that makes you look credible before the first call</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section aria-labelledby="where">
+      <div class="sec-head">
+        <p class="mono">Where it lives</p>
+        <h2 id="where">Built for the platform it will play on</h2>
+        <p>One idea, cut the right way for each place your audience watches.</p>
+      </div>
+      <ul class="chips">
+        <li>YouTube</li>
+        <li>Vimeo</li>
+        <li>Instagram</li>
+        <li>Facebook</li>
+        <li>Your website</li>
+        <li>Internal training portal</li>
+      </ul>
+      <p class="platform-note">Educational video earns its keep when it solves a problem a customer is already searching for. We plan each video around that question, then format it for the channel.</p>
+    </section>
+
+    <section id="samples" aria-labelledby="sm">
+      <div class="sec-head">
+        <p class="mono">Sample work</p>
+        <h2 id="sm">A few educational and training videos we've made</h2>
+        <p>Press play to watch each one here on the page.</p>
+      </div>
+
+<div class="samples">
+
+  <!-- VIDEO 1 (YouTube) -->
+  <div class="sample">
+    <div class="mph-frame">
+      <iframe src="https://www.youtube.com/embed/1rmnKTW3L9g?si=70PwW_Cw8S0QY32Z"
+              title="Sales training lesson"
+              allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="mono tag">Web Series</p>
+    <h3>Sales training lesson</h3>
+    <p>A clear, on-camera lesson your team can watch on their own time.</p>
+    <a class="mph-link" href="https://www.youtube.com/embed/1rmnKTW3L9g?si=70PwW_Cw8S0QY32Z" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+  </div>
+
+  <!-- VIDEO 2: replace PASTE-EMBED-LINK-2 (see the note below the code) -->
+  <div class="sample">
+    <div class="mph-frame">
+      <iframe src="https://www.youtube.com/embed/Sg6lTCc6_lw?si=zAISszRfvWH8Rqgr"
+              title="Educational Video Content"
+              allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="mono tag">Franchise training</p>
+    <h3>Educational Video Content</h3>
+    <p>Helps potential customer learn and understand more about your product and services.</p>
+    <a class="mph-link" href="https://www.youtube.com/embed/Sg6lTCc6_lw?si=zAISszRfvWH8Rqgr" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+  </div>
+
+  <!-- VIDEO 3: replace PASTE-EMBED-LINK-3 -->
+  <div class="sample">
+    <div class="mph-frame">
+      <iframe src="https://www.youtube.com/embed/4ykLEwcbRnU?si=tPngN0LQb2Itl5u8"
+              title="Product explainer"
+              allow="accelerometer; autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p class="mono tag">Product video</p>
+    <h3>Product explainer</h3>
+    <p>Shows what the product does and why it solves the customer's problem.</p>
+    <a class="mph-link" href="https://www.youtube.com/embed/4ykLEwcbRnU?si=tPngN0LQb2Itl5u8" target="_blank" rel="noopener">Watch on YouTube &rarr;</a>
+  </div>
+
+</div>
+
+
+    <section aria-labelledby="who">
+      <div class="sec-head">
+        <p class="mono">Who we've made it for</p>
+        <h2 id="who">Training video across industries</h2>
+        <p>We've created content inside franchise businesses, sales training companies, real estate firms, and product-based businesses.</p>
+      </div>
+      <ul class="grid4">
+        <li><b>Franchise businesses</b><span>Consistent training that every location can use.</span></li>
+        <li><b>Sales training</b><span>Lessons and walkthroughs that teach a team how to sell.</span></li>
+        <li><b>Real estate firms</b><span>Corporate and educational content for agents and clients.</span></li>
+        <li><b>Product businesses</b><span>Product videography that explains what you sell.</span></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="make">
+      <div class="sec-head">
+        <p class="mono">What we produce</p>
+        <h2 id="make">Flexible, start to finish</h2>
+        <p>We shape each project around your goals, your audience, and where the video will be watched.</p>
+      </div>
+      <ul class="grid4">
+        <li><b>Training and educational video</b><span>Planned, directed, shot, and edited by one team.</span></li>
+        <li><b>Custom motion graphics</b><span>Animated graphics and text that make complex ideas easy to follow.</span></li>
+        <li><b>Product videography</b><span>Clean, professional video that shows your product at its best.</span></li>
+        <li><b>Series and ongoing content</b><span>A repeatable format so your library keeps growing.</span></li>
+      </ul>
+    </section>
+
+    <div id="start">
+      <p class="mono">Get started</p>
+      <h2>Ready to become the expert people go to?</h2>
+      <p>Book a discovery call. We'll talk through your team, your customers, and the videos that would help most.</p>
+      <div class="actions">
+        <!-- Swap this href for your booking link or contact page -->
+        <a class="btn" href="https://mphmediaco.com">Book a discovery call</a>
+        <a class="btn ghost" href="#samples">Watch the samples</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mono">
+    <span>MPH Media LLC</span>
+    <span>Nashville, Tennessee</span>
+    <span>mphmediaco.com</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var cards = document.querySelectorAll('.sample');
+  Array.prototype.forEach.call(cards, function (card) {
+    var frame = card.querySelector('.mph-frame');
+    var link = card.querySelector('.mph-link');
+    if (!frame || !link) return;
+    var url = link.getAttribute('href');
+    var m = url.match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/([a-z0-9]+))?/i);
+    if (!m) return;
+    var id = m[1];
+    var hash = m[2] || '';
+    var q = url.match(/[?&]h=([a-z0-9]+)/i);
+    if (!hash && q) hash = q[1];
+
+    try {
+      fetch('https://vimeo.com/api/oembed.json?width=1280&url=' + encodeURIComponent(url))
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          if (d && d.thumbnail_url) frame.style.backgroundImage = 'url("' + d.thumbnail_url + '")';
+        })
+        .catch(function () {});
+    } catch (e) {}
+
+    frame.addEventListener('click', function () {
+      if (frame.classList.contains('playing')) return;
+      var iframe = document.createElement('iframe');
+      iframe.src = 'https://player.vimeo.com/video/' + id + '?autoplay=1&title=0&byline=0&portrait=0' + (hash ? '&h=' + hash : '');
+      iframe.title = frame.getAttribute('data-title') || 'Video';
+      iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+      iframe.setAttribute('allowfullscreen', '');
+      frame.classList.add('playing');
+      frame.innerHTML = '';
+      frame.appendChild(iframe);
+    });
+  });
+})();
+</script>
+
+
+<footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <!-- Logo -->
+    <img src="MPH_Logo.png" alt="MPH Media Logo" style="height: 48px; margin: 24px 0 0 0;" />
+
+    <!-- Navigation -->
+    <nav style="display: flex; gap: 32px; font-size: 1.1em; margin-bottom: 12px;" aria-label="Footer Navigation">
+      <a href="index.html#home" style="color: #fff; text-decoration: none;">Home</a>
+      <a href="about.html" style="color: #fff; text-decoration: none;">About Us</a>
+      <a href="index.html#services" style="color: #fff; text-decoration: none;">Services</a>
+      <a href="index.html#case-studies" style="color: #fff; text-decoration: none;">Case Studies</a>
+      <a href="contact.html" style="color: #fff; text-decoration: none;">Contact Us</a>
+    </nav>
+
+    <!-- Contact Info -->
+    <div style="font-size: 1em; text-align: center;">
+      <span>Email: <a href="mailto:michael.hamm@mphmediallc.com" style="color: #39ff14; text-decoration: none;">mphmediaco@gmail.com</a></span> |
+      <span>Phone: <a href="tel:6154773210" style="color: #39ff14; text-decoration: none;">(615) 477-3210</a></span> |
+      <span>Location: Nashville, TN</span>
+    </div>
+
+  <!-- Social Icons -->
+  <div style="margin-top: 18px; display: flex; gap: 24px; justify-content: center;">
+    <a href="https://www.instagram.com/mphmedia_llc?igsh=YWdnNm5wYnV0cXlh&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+    <a href="https://www.facebook.com/share/15vPrcJrLt/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+    <a href="https://www.linkedin.com/company/mph-media-llc/" target="_blank" rel="noopener" title="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="height: 32px; width: 32px; filter: invert(80%) sepia(100%) saturate(0%) hue-rotate(0deg);" />
+    </a>
+  </div>
+
+  <!-- Copyright -->
+  <div style="margin-top: 10px; font-size: 0.9em; color: #aaa;">&copy; 2025 MPH Media LLC. All rights reserved.</div>
+
+  <!-- Hover effect -->
+  <style>
+    footer a img:hover { transform: scale(1.08); transition: transform 0.18s ease-in-out; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+  </div>
+</footer>
