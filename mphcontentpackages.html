@@ -228,6 +228,8 @@ function toggleMenu() {
   --accent: #F2B233;
   --accent-ink: #15191C;
   --accent-text: #8A5600;
+  --frame: #1B2024;
+  --frame-ink: #ECEEEF;
   --font-display: "Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
   --font-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
@@ -342,6 +344,32 @@ h2 {
 .tier .btn.ghost:hover { border-color: var(--ink); }
 .note { margin-top: 20px; color: var(--muted); font-size: 14px; }
 
+/* Samples */
+.samples { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.sample { display: grid; gap: 14px; text-decoration: none; min-width: 0; }
+.thumb {
+  position: relative; aspect-ratio: 3 / 4; max-width: 100%; border-radius: 6px; overflow: hidden;
+  background: linear-gradient(160deg, var(--frame) 0%, #2A3238 100%); border: 1px solid var(--line);
+  display: grid; place-items: center;
+}
+.thumb::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(0deg, transparent 0 3px, rgba(255,255,255,0.025) 3px 4px); pointer-events: none; }
+.play {
+  width: 64px; height: 64px; border-radius: 50%; background: var(--accent); display: grid; place-items: center;
+  transition: transform 0.15s ease;
+}
+.play::before { content: ""; margin-left: 4px; border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent var(--accent-ink); }
+.sample:hover .play { transform: scale(1.08); }
+.sample:focus-visible .thumb { outline: 3px solid var(--accent); outline-offset: 3px; }
+.thumb .tag, .thumb .len {
+  position: absolute; z-index: 1; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--frame-ink); background: rgba(0,0,0,0.55); padding: 4px 8px; border-radius: 3px;
+}
+.thumb .tag { top: 12px; left: 12px; }
+.thumb .len { bottom: 12px; right: 12px; font-variant-numeric: tabular-nums; }
+.sample h3 { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: 26px; line-height: 1.05; }
+.sample p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+.sample .go { color: var(--accent-text); font-weight: 600; font-size: 15px; }
+
 /* Included */
 .included { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 40px; list-style: none; padding: 0; }
 .included li { padding-block: 14px; border-top: 1px solid var(--line); display: grid; grid-template-columns: 20px 1fr; gap: 10px; }
@@ -404,6 +432,107 @@ footer { padding-top: 32px; color: var(--muted); display: flex; flex-wrap: wrap;
         <li><b>A clearer message</b><span>Content built around your ideal customer, adjusted as you learn what moves your audience.</span></li>
       </ul>
     </section>
+
+<section class="mph-samples" id="samples">
+  <style>
+    .mph-samples{--acc:#F2B233;max-width:1120px;margin:0 auto;padding:48px 16px;color:inherit;font-family:inherit;box-sizing:border-box}
+    .mph-samples *{box-sizing:border-box}
+    .mph-samples h2{margin:0 0 8px;font-size:clamp(28px,5vw,44px);line-height:1.05;text-transform:uppercase}
+    .mph-sub{margin:0 0 28px;opacity:.75;max-width:60ch}
+    .mph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,300px));gap:28px;justify-content:center}
+    .mph-card{min-width:0}
+    .mph-frame{position:relative;aspect-ratio:9/16;width:100%;border-radius:8px;overflow:hidden;background:#1B2024 center/cover no-repeat;cursor:pointer}
+    .mph-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.4),transparent 55%);pointer-events:none}
+    .mph-frame.playing{cursor:default}
+    .mph-frame.playing::after{display:none}
+    .mph-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000;z-index:2}
+    .mph-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;width:68px;height:68px;border-radius:50%;border:0;padding:0;background:var(--acc);cursor:pointer;transition:transform .15s ease}
+    .mph-play::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-35%,-50%);border-style:solid;border-width:12px 0 12px 20px;border-color:transparent transparent transparent #15191C}
+    .mph-frame:hover .mph-play{transform:translate(-50%,-50%) scale(1.08)}
+    .mph-card h3{margin:14px 0 4px;font-size:22px;line-height:1.15;text-transform:uppercase}
+    .mph-card p{margin:0 0 10px;opacity:.75;font-size:15px}
+    .mph-link{color:inherit;font-weight:600;font-size:15px;text-decoration:none;border-bottom:2px solid var(--acc)}
+    @media (max-width:560px){.mph-grid{grid-template-columns:minmax(0,320px)}}
+  </style>
+
+  <h2>See what a month looks like</h2>
+  <p class="mph-sub">Short samples of the kind of video our monthly packages deliver. Press play to watch.</p>
+
+  <div class="mph-grid">
+
+    <!-- VIDEO 1: paste your Vimeo link in the href below -->
+    <div class="mph-card">
+      <div class="mph-frame" data-title="Home services reel">
+        <button class="mph-play" type="button" aria-label="Play Home services reel"></button>
+      </div>
+      <h3>Home services reel</h3>
+      <p>A short reel built for Instagram and TikTok.</p>
+      <a class="mph-link" href="https://vimeo.com/1182826633?share=copy&fl=sv&fe=ci" target="_blank" rel="noopener">Watch on Vimeo &rarr;</a>
+    </div>
+
+    <!-- VIDEO 2 -->
+    <div class="mph-card">
+      <div class="mph-frame" data-title="Wellness brand story">
+        <button class="mph-play" type="button" aria-label="Play Wellness brand story"></button>
+      </div>
+      <h3>Clinician Story</h3>
+      <p>Who the business is and why customers should trust them.</p>
+      <a class="mph-link" href="https://vimeo.com/1235521265?share=copy&fl=sv&fe=ci" target="_blank" rel="noopener">Watch on Vimeo &rarr;</a>
+    </div>
+
+    <!-- VIDEO 3 -->
+    <div class="mph-card">
+      <div class="mph-frame" data-title="Business process video">
+        <button class="mph-play" type="button" aria-label="Play Business process video"></button>
+      </div>
+      <h3>Business process video</h3>
+      <p>How the work gets done, shown on site with drone footage.</p>
+      <a class="mph-link" href="https://vimeo.com/1220947961?share=copy&fl=sv&fe=ci target="_blank" rel="noopener">Watch on Vimeo &rarr;</a>
+    </div>
+
+  </div>
+
+  <script>
+  (function () {
+    var cards = document.querySelectorAll('.mph-samples .mph-card');
+    Array.prototype.forEach.call(cards, function (card) {
+      var frame = card.querySelector('.mph-frame');
+      var link = card.querySelector('.mph-link');
+      var url = link.getAttribute('href');
+      var m = url.match(/vimeo\.com\/(?:video\/)?(\d+)(?:\/([a-z0-9]+))?/i);
+      if (!m) return;
+      var id = m[1];
+      var hash = m[2] || '';
+      var q = url.match(/[?&]h=([a-z0-9]+)/i);
+      if (!hash && q) hash = q[1];
+
+      // Try to load the video's thumbnail. If it fails, the dark card still works.
+      try {
+        fetch('https://vimeo.com/api/oembed.json?width=720&url=' + encodeURIComponent(url))
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d && d.thumbnail_url) frame.style.backgroundImage = 'url("' + d.thumbnail_url + '")';
+          })
+          .catch(function () {});
+      } catch (e) {}
+
+      frame.addEventListener('click', function () {
+        if (frame.classList.contains('playing')) return;
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://player.vimeo.com/video/' + id +
+          '?autoplay=1&title=0&byline=0&portrait=0' + (hash ? '&h=' + hash : '');
+        iframe.title = frame.getAttribute('data-title') || 'Video';
+        iframe.allow = 'autoplay; fullscreen; picture-in-picture';
+        iframe.setAttribute('allowfullscreen', '');
+        frame.classList.add('playing');
+        frame.innerHTML = '';
+        frame.appendChild(iframe);
+      });
+    });
+  })();
+  </script>
+</section>
+
 
     <section id="packages" aria-labelledby="pk">
       <div class="sec-head">
@@ -535,8 +664,12 @@ footer { padding-top: 32px; color: var(--muted); display: flex; flex-wrap: wrap;
 </div>
 
 
-
-
+  <footer class="mono">
+    <span>MPH Media LLC</span>
+    <span>Nashville, Tennessee</span>
+    <span>mphmediaco.com</span>
+  </footer>
+</div>
 
 <footer style="background: linear-gradient(90deg, #000 60%, #a6a0a0 100%); color: #fff; padding: 0; margin-top: 40px;">
   <div style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
